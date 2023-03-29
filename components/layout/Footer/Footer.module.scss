@@ -1,0 +1,135 @@
+@import 'mixins';
+
+.footer {
+    background-color: var(--color-lightest-grey);
+    padding: var(--spacing-single);
+
+    @include breakpoint('medium') {
+        padding: 2rem var(--spacing-single);
+    }
+
+    .has-stickyBar & {
+        padding-bottom: 190px;
+    }
+}
+
+.footerNav {
+    display: grid;
+    grid-gap: var(--spacing-single);
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+
+    @include breakpoint('small') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint('medium') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint('large') {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.footerCol {
+    font-size: var(--font-size-base);
+
+    &:last-child {
+        @include breakpoint('small') {
+            grid-column: 1 / 3;
+        }
+
+        @include breakpoint('medium') {
+            grid-column: 2 / 4;
+        }
+
+        @include breakpoint('large') {
+            grid-column: 5 / 7;
+        }
+    }
+
+    a {
+        color: var(--color-not-black);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        margin-bottom: var(--spacing-half);
+    }
+}
+
+.footerColTitle {
+    border-bottom: 2px solid var(--color-light-grey);
+    color: var(--color-not-black);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-half);
+    padding-bottom: var(--spacing-third);
+    text-transform: inherit;
+}
+
+.footerColSocial {
+    display: inline-grid;
+    grid-gap: var(--spacing-half);
+    grid-template-columns: repeat(5, 1fr);
+    margin: var(--spacing-eighth) 0 0;
+}
+
+.footerLinkSocial {
+    display: inline-block;
+    font-size: 0;
+}
+
+.socialIcon {
+    svg {
+        display: inline-block;
+        fill: var(--color-not-black);
+        height: 18px;
+        transition: all 150ms ease;
+        width: 18px;
+
+        &:hover {
+            fill: var(--color-dark-grey);
+        }
+    }
+}
+
+.legal {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: var(--spacing-double);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        text-align: center;
+    }
+
+    ul {
+        color: var(--color-dark-grey);
+        font-size: var(--font-size-small);
+        list-style: none;
+        margin: 0;
+
+        a {
+            color: var(--color-dark-grey);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--color-dark-grey);
+                text-decoration: underline;
+            }
+        }
+
+        li {
+            display: inline-block;
+            margin-right: var(--spacing-half);
+        }
+    }
+}

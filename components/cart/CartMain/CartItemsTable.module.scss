@@ -1,0 +1,49 @@
+@import 'mixins';
+
+.cartItemsTable {
+    border-top: 2px solid var(--color-light-grey);
+    display: block;
+    margin-bottom: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        border-top: 0;
+        display: table;
+    }
+}
+
+.cartTableHeader {
+    border-bottom: 2px solid var(--color-light-grey);
+    display: none;
+
+    @include breakpoint('medium') {
+        display: table-header-group;
+        text-align: left;
+    }
+}
+
+.cartTableHeaderItem {
+    padding-bottom: var(--spacing-two-thirds);
+
+    &:last-child {
+        text-align: right;
+    }
+}
+
+.cartTableFooter {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: table-footer-group;
+    }
+}
+
+.cartTableFooterSubtotal {
+    @extend %tnum;
+    font-variant-numeric: initial;
+    font-feature-settings: 'tnum';
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-sans-bold);
+    padding: var(--spacing-two-thirds) 0;
+    text-align: right;
+}

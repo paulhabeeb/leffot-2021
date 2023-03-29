@@ -1,0 +1,29 @@
+.title {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-eighth);
+    margin-right: var(--spacing-quarter);
+}
+
+.content {
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-single);
+
+    a {
+        color: var(--color-primary);
+    }
+
+    ol,
+    ul {
+        margin-left: var(--spacing-single);
+    }
+
+    ol {
+        list-style: numbers;
+    }
+
+    ul {
+        list-style: disc;
+    }
+}

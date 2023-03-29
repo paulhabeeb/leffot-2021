@@ -1,0 +1,22 @@
+.container {
+    & + & {
+        margin-top: var(--spacing-single);
+    }
+}
+
+.paragraph {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon {
+    fill: var(--color-dark-grey);
+    height: 17px;
+    margin-right: var(--spacing-third);
+    width: 10px;
+}
+
+.fileSize {
+    font-size: var(--font-size-small);
+    margin-left: var(--spacing-half);
+}

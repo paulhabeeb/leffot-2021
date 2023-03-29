@@ -1,0 +1,22 @@
+.container {
+    align-items: flex-start;
+    background: var(--color-lightest-grey);
+    display: flex;
+    margin-bottom: var(--spacing-single);
+    padding: var(--spacing-single);
+
+    svg {
+        fill: var(--color-primary);
+        margin-right: var(--spacing-third);
+        width: 25px;
+    }
+}
+
+.caption {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}

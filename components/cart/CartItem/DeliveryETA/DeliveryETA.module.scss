@@ -1,0 +1,30 @@
+@import 'mixins';
+
+.itemETA {
+    align-items: center;
+    color: var(--color-dark-grey);
+    display: flex;
+    margin: var(--spacing-half) 0;
+
+    @include breakpoint('medium') {
+        margin-top: var(--spacing-single);
+    }
+}
+
+.icon {
+    display: inline-block;
+    flex-basis: 16px;
+    height: 16px;
+    margin-right: var(--spacing-third);
+    transition: all 150ms ease;
+    width: 16px;
+
+    svg {
+        fill: var(--color-dark-grey);
+    }
+}
+
+.text {
+    flex-basis: 0;
+    flex-grow: 1;
+}

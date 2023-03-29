@@ -1,0 +1,21 @@
+@import 'buttons';
+
+.container {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonWrapper {
+    flex-basis: 70px;
+    margin-bottom: var(--spacing-two-thirds);
+}
+
+.button {
+    @extend %buttonPrimary;
+    margin-left: var(--spacing-half);
+    min-width: 70px;
+}

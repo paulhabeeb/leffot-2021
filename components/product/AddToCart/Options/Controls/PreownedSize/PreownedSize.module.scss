@@ -1,0 +1,16 @@
+.dl {
+    display: flex;
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-double);
+}
+
+.dt {
+    margin-bottom: 0;
+}
+
+.dd {
+    font-variant-numeric: initial;
+    font-feature-settings: initial;
+    margin-bottom: 0;
+    margin-left: var(--spacing-single);
+}

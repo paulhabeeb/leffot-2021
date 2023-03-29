@@ -1,0 +1,7 @@
+@import 'mixins';
+
+.mmSecs {
+    @include breakpoint('large') {
+        padding: var(--spacing-single);
+    }
+}

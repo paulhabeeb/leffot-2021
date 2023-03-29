@@ -1,0 +1,12 @@
+.container {
+    & + & {
+        margin-top: var(--spacing-single);
+    }
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-medium);
+    margin-bottom: var(--spacing-third);
+}

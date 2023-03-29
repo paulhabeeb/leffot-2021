@@ -1,0 +1,38 @@
+@import 'mixins';
+
+.container {
+    background-color: var(--color-white);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 50;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+}
+
+.sidebar {
+    padding: var(--spacing-single);
+
+    @include breakpoint('medium') {
+        padding: var(--spacing-triple) var(--spacing-single)
+            var(--spacing-single);
+    }
+
+    h2 {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-sans-bold);
+        margin-bottom: var(--spacing-half);
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 1.15rem;
+    }
+}

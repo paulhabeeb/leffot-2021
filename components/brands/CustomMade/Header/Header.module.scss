@@ -1,0 +1,33 @@
+@import 'mixins';
+@import 'text';
+
+.heading {
+    @extend %textBase;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('large') {
+        flex-direction: row;
+    }
+
+    + div {
+        margin-top: var(--spacing-single);
+        padding-top: var(--spacing-single);
+
+        @include breakpoint('large') {
+            border-top: 1px solid var(--color-light-grey);
+            margin-top: var(--spacing-double);
+            padding-top: var(--spacing-double);
+        }
+    }
+}
+
+.flexElement {
+    width: 100%;
+
+    &:last-of-type {
+        @include breakpoint('large') {
+            margin-left: var(--spacing-double);
+        }
+    }
+}

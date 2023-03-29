@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.brandGrid {
+    display: grid;
+    grid-gap: var(--spacing-single);
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: var(--spacing-single) var(--spacing-single) 0;
+    width: 100%;
+
+    @include breakpoint('small') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint('medium') {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 var(--spacing-single);
+    }
+
+    @include breakpoint('xl') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

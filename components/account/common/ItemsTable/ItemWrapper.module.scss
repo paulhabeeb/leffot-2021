@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.wrapper {
+    border-top: 1px solid var(--color-light-grey);
+    font-size: var(--font-size-base);
+
+    @include breakpoint('small') {
+        border-top: 0;
+        display: table-row;
+    }
+}

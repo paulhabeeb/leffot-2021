@@ -1,0 +1,42 @@
+@import 'buttons';
+@import 'mixins';
+
+.container {
+    background-color: var(--color-light-grey);
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint('small') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint('medium') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint('large') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint('xl') {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.buttonContainer {
+    margin-top: var(--spacing-single);
+}
+
+.button {
+    @extend %buttonSecondary;
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        width: auto;
+    }
+}

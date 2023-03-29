@@ -1,0 +1,40 @@
+.container {
+    align-items: center;
+    border-radius: 1px;
+    border-style: none;
+    display: inline-flex;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-normal);
+    margin-bottom: var(--spacing-single);
+    padding: var(--spacing-half) 1.125rem;
+    position: relative;
+    transition: opacity 300ms ease-out;
+}
+
+.info {
+    background-color: var(--color-lightest-grey);
+    border-left: 3px solid var(--color-primary);
+    color: var(--color-not-black);
+}
+
+.error {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.icon {
+    padding-right: 1.125rem;
+    text-align: center;
+
+    svg {
+        fill: var(--color-white);
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.message {
+    margin: 0;
+    width: 100%;
+}

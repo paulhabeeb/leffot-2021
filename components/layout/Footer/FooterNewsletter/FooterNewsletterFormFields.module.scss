@@ -1,0 +1,29 @@
+@import 'buttons';
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('small') {
+        flex-direction: row;
+    }
+}
+
+.button {
+    @extend %buttonSecondary;
+    margin-bottom: var(--spacing-two-thirds);
+    margin-left: 0;
+    min-width: 100px;
+    width: 100%;
+
+    @include breakpoint('small') {
+        margin-left: var(--spacing-two-thirds);
+        width: auto;
+    }
+}
+
+.success {
+    font-weight: var(--font-weight-sans-bold);
+    margin-top: var(--spacing-two-thirds);
+}

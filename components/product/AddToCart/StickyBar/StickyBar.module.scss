@@ -1,0 +1,93 @@
+@import 'mixins';
+
+.container {
+    background-color: var(--color-lightest-grey);
+    border-top: 1px solid var(--color-light-grey);
+    bottom: 0;
+    left: 0;
+    padding: var(--spacing-two-thirds) var(--spacing-single);
+    position: fixed;
+    right: 0;
+    z-index: 15;
+
+    @include breakpoint('large') {
+        padding: var(--spacing-two-thirds) var(--spacing-double);
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint('medium') {
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    :global(.product-options) {
+        width: 100%;
+
+        @include breakpoint('medium') {
+            height: auto !important;
+            overflow: visible !important;
+        }
+
+        > div {
+            @include breakpoint('medium') {
+                display: block !important;
+            }
+        }
+    }
+}
+
+.actions {
+    @extend %tnum;
+    display: block;
+    margin-right: var(--spacing-single);
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}
+
+.buttonWrapper {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    @include breakpoint('medium') {
+        flex-basis: unset;
+        flex-grow: unset;
+    }
+}
+
+.showOptionsButton {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-sans-medium);
+    padding: 0;
+    transition: all 150ms ease;
+
+    &::after {
+        border-bottom: 2px solid var(--color-dark-grey);
+        border-right: 2px solid var(--color-dark-grey);
+        content: '';
+        display: inline-block;
+        height: 6px;
+        margin-top: -4px;
+        margin-left: var(--spacing-third);
+        transform: rotate(45deg);
+        transition: all 150ms ease;
+        vertical-align: middle;
+        width: 6px;
+    }
+
+    &.isOpen::after {
+        margin-top: 0;
+        transform: rotate(-135deg);
+    }
+}
+
+.error {
+    margin-bottom: 0;
+    margin-top: var(--spacing-half);
+}

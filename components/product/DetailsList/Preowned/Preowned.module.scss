@@ -1,0 +1,22 @@
+.list {
+    margin: var(--spacing-single) 0;
+}
+
+.condition {
+    &::after {
+        color: var(--color-loader);
+        content: '/';
+        display: inline-block;
+        padding-left: var(--spacing-half);
+        padding-right: var(--spacing-half);
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+}
+
+.selectedCondition {
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}

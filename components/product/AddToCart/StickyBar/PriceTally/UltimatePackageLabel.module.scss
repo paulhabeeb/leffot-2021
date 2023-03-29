@@ -1,0 +1,53 @@
+@import 'inputs';
+@import 'mixins';
+
+.button {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-base);
+    padding: 0;
+    position: relative;
+
+    &:hover {
+        color: var(--color-not-black);
+        cursor: pointer;
+
+        svg {
+            fill: var(--color-not-black);
+        }
+    }
+
+    &:focus {
+        @extend %inputFocus;
+    }
+}
+
+.icon {
+    fill: var(--color-dark-grey);
+    height: 14px;
+    margin-left: var(--spacing-quarter);
+    vertical-align: middle;
+    width: 14px;
+}
+
+.tooltip {
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    font-size: 15px;
+    padding: var(--spacing-third);
+
+    &::after {
+        background: var(--color-dark-grey);
+        content: '';
+        display: block;
+        height: 12px;
+        left: var(--spacing-single);
+        position: absolute;
+        transform: rotate(45deg);
+        width: 12px;
+
+        @include breakpoint('medium') {
+            left: unset;
+            right: 50%;
+        }
+    }
+}

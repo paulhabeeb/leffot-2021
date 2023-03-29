@@ -1,0 +1,39 @@
+@import 'mixins';
+
+.container {
+    display: block;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double);
+    }
+}
+
+.caption {
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-double);
+    max-width: 700px;
+    width: 100%;
+}
+
+.eventList {
+    display: grid;
+    grid-gap: var(--spacing-single);
+    grid-template-columns: 1fr;
+
+    @include breakpoint('medium') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint('xl') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

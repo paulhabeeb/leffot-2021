@@ -1,0 +1,29 @@
+@import 'mixins';
+
+.priceBox {
+    @extend %tnum;
+    font-size: var(--font-size-medium-large);
+    margin-top: var(--spacing-single);
+
+    dd,
+    dt {
+        margin-bottom: 0;
+    }
+}
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-sixth) 0;
+}
+
+.price {
+    @extend %flex;
+}
+
+.total {
+    @extend %flex;
+    border-top: 1px solid var(--color-medium-grey);
+    margin-top: var(--spacing-half);
+    padding-top: var(--spacing-half);
+}

@@ -1,0 +1,19 @@
+.container {
+    padding: var(--spacing-single) 0;
+}
+
+.cartItemActions {
+    align-items: center;
+    display: flex;
+}
+
+.editRemove {
+    align-items: center;
+    display: flex;
+}
+
+.errors {
+    color: var(--color-red);
+    font-weight: var(--font-weight-sans-bold);
+    margin-top: var(--spacing-two-thirds);
+}

@@ -1,0 +1,39 @@
+@import 'buttons';
+@import 'mixins';
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--spacing-single);
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+}
+
+.submit {
+    @extend %buttonPrimary;
+    height: 50px;
+    width: 100%;
+}
+
+.delete {
+    @extend %buttonPrimaryDestructive;
+    height: 50px;
+    width: 100%;
+}
+
+.cancel {
+    @extend %buttonSubtle;
+    align-items: center;
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    margin-top: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        margin-left: var(--spacing-single);
+        margin-top: 0;
+    }
+}

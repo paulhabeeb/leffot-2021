@@ -1,0 +1,11 @@
+@import 'inputs';
+
+.input {
+    @extend %inputBase;
+    padding: var(--spacing-third) var(--spacing-half);
+    width: 100%;
+}
+
+.disabled {
+    @extend %disabled;
+}

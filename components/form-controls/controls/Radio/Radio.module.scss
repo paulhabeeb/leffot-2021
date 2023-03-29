@@ -1,0 +1,141 @@
+@import 'inputs';
+
+.regular {
+    cursor: pointer;
+    display: block;
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    padding-left: var(--spacing-single);
+    position: relative;
+
+    &::after,
+    &::before {
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        transition: all 200ms ease;
+    }
+
+    &::after {
+        background: var(--color-dark-grey);
+        height: var(--spacing-third);
+        left: 6px;
+        top: 8px;
+        transform: scale(0);
+        width: var(--spacing-third);
+    }
+
+    &::before {
+        @extend %inputBase;
+        background-color: var(--color-white);
+        box-sizing: content-box;
+        height: var(--spacing-two-thirds);
+        left: 0;
+        margin-right: var(--spacing-third);
+        top: 2px;
+        width: var(--spacing-two-thirds);
+    }
+
+    input:checked + & {
+        &::after {
+            transform: scale(1);
+        }
+
+        &::before {
+            border-color: var(--color-dark-grey);
+        }
+    }
+
+    input:focus + &::before {
+        @extend %inputFocus;
+    }
+}
+
+.rectangle {
+    @extend %rectangleInput;
+    position: relative;
+}
+
+.swatch {
+    @extend %rectangleInput;
+    font-size: 0;
+    max-width: 100px;
+    padding: 1px;
+    position: relative;
+
+    :global(.swatch-label) {
+        color: var(--color-not-black);
+        display: inline-block;
+        opacity: 0;
+    }
+
+    &:hover {
+        :global(.swatch-label) {
+            background-color: var(--color-lightest-grey);
+            border: 1px solid var(--color-light-grey);
+            bottom: -45px;
+            box-shadow: 0 0 10px 0 rgb(13, 13, 13, 0.15);
+            font-size: var(--font-size-base);
+            left: 0;
+            padding: var(--spacing-quarter) var(--spacing-third);
+            position: absolute;
+            opacity: 1;
+            white-space: nowrap;
+            z-index: 5;
+
+            &::before {
+                background-color: var(--color-lightest-grey);
+                border-left: 1px solid var(--color-light-grey);
+                border-top: 1px solid var(--color-light-grey);
+                content: '';
+                display: inline-block;
+                height: 10px;
+                left: 10px;
+                position: absolute;
+                top: -6px;
+                transform: rotate(45deg);
+                width: 10px;
+            }
+        }
+    }
+}
+
+.disabled {
+    @extend %disabled;
+
+    &::before {
+        background: linear-gradient(
+            to left top,
+            rgba(255, 255, 255, 0) 0,
+            rgba(255, 255, 255, 0) 49%,
+            var(--color-light-grey) 49%,
+            var(--color-light-grey) 52%,
+            rgba(255, 255, 255, 0) 52%
+        );
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.classicDisabled {
+    color: var(--color-disabled);
+    cursor: not-allowed;
+
+    &:hover::before {
+        border-color: var(--color-light-grey);
+    }
+}
+
+.swatchDisabled::after {
+    background-color: rgb(200, 200, 200, 0.75);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

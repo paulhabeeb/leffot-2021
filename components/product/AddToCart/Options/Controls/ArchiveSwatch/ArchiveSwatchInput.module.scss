@@ -1,0 +1,49 @@
+@import 'inputs';
+
+.label {
+    @extend %rectangleInput;
+    font-size: 0;
+    overflow: hidden;
+    padding: 1px;
+    position: relative;
+    text-align: center;
+    white-space: break-spaces;
+
+    input:disabled + & {
+        @extend %disabled;
+
+        .caption,
+        .title {
+            color: var(--color-disabled);
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size-base);
+}
+
+.text {
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: var(--spacing-two-thirds);
+    text-align: left;
+}
+
+.title {
+    color: var(--color-not-black);
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-sans-medium);
+    margin-bottom: 0;
+}
+
+.caption {
+    color: var(--color-dark-grey);
+    font-weight: var(--font-weight-sans-normal);
+    margin-bottom: 0;
+}

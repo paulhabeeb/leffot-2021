@@ -1,0 +1,39 @@
+@import 'buttons';
+
+%greyButton {
+    background-color: var(--color-lightest-grey);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-half);
+    padding: var(--spacing-two-thirds);
+}
+
+.button {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+    height: 52px;
+    width: 100%;
+}
+
+.oosMessage {
+    @extend %greyButton;
+    cursor: not-allowed;
+    width: 100%;
+}
+
+.preorderMessage {
+    margin-bottom: var(--spacing-double);
+    text-align: center;
+}
+
+.comingSoon {
+    @extend %greyButton;
+}
+
+.messageBelow {
+    color: var(--color-dark-grey);
+
+    a {
+        color: var(--color-dark-grey);
+    }
+}

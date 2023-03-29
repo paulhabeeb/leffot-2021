@@ -1,0 +1,19 @@
+.wrapper {
+    background-color: var(--color-white);
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: var(--spacing-double);
+    width: 800px;
+
+    :global(.braintree-heading) {
+        font-family: var(--font-sans);
+        font-weight: var(--font-weight-sans-bold);
+    }
+}
+
+.title {
+    font-size: var(--font-size-large);
+}

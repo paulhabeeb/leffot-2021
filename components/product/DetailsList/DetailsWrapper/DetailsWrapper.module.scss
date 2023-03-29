@@ -1,0 +1,17 @@
+@import 'mixins';
+
+.container {
+    margin-top: var(--spacing-half);
+
+    @include breakpoint('small') {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    + div {
+        margin-top: var(--spacing-double);
+    }
+}

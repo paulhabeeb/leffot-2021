@@ -1,0 +1,112 @@
+@import 'mixins';
+
+.nav {
+    position: relative;
+}
+
+.menuButton {
+    background-color: var(--color-lightest-grey);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='rgba(117, 117, 117, 0.999)' /%3E%3C/svg%3E");
+    background-position: right 0.7em top 50%, 0 0;
+    background-repeat: no-repeat;
+    border: 1px solid var(--color-light-grey);
+    border-radius: 2px;
+    display: block;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    margin: 0;
+    padding: var(--spacing-third) var(--spacing-two-thirds);
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 15;
+
+    @include breakpoint('medium') {
+        display: none;
+        z-index: 0;
+    }
+}
+
+.menuButtonCaption {
+    line-height: 1.5;
+    margin-left: 25px;
+}
+
+%iconLine {
+    background: var(--color-not-black);
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 15px;
+}
+
+.menuButtonIcon {
+    @extend %iconLine;
+    top: calc(50% - 1px);
+
+    &::after {
+        @extend %iconLine;
+        bottom: -0.35rem;
+    }
+
+    &::before {
+        @extend %iconLine;
+        top: -0.35rem;
+    }
+}
+
+.menuItemList {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 2px;
+    box-shadow: 0 0px 15px rgba(31, 31, 31, 0.15);
+    display: none;
+    margin: 0;
+    min-width: 200px;
+    padding: 0;
+    position: absolute;
+    top: calc(100% - 1px);
+    width: 100%;
+    z-index: 10;
+
+    &.isOpen {
+        display: block;
+    }
+
+    @include breakpoint('medium') {
+        box-shadow: none;
+        display: block;
+        position: sticky;
+        top: 100px;
+        z-index: 0;
+    }
+}
+
+.menuItem {
+    &:last-of-type a {
+        border-bottom: 0;
+    }
+
+    a {
+        color: var(--color-not-black);
+        border-bottom: 1px solid var(--color-light-grey);
+        display: block;
+        padding: var(--spacing-third) var(--spacing-two-thirds);
+        text-decoration: none;
+        transition: all 200ms ease;
+
+        &:hover {
+            background-color: var(--color-lightest-grey);
+        }
+    }
+
+    &.active {
+        background-color: var(--color-white);
+        font-weight: var(--font-weight-sans-bold);
+
+        @include breakpoint('medium') {
+            background-color: var(--color-lightest-grey);
+        }
+    }
+}

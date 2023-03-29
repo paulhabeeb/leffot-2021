@@ -1,0 +1,28 @@
+%table {
+    table {
+        margin: var(--spacing-single) 0;
+        width: 100%;
+    }
+
+    td,
+    th {
+        padding: var(--spacing-third) var(--spacing-single);
+        vertical-align: middle;
+    }
+
+    td:last-child,
+    th:last-child {
+        text-align: right;
+    }
+
+    td {
+        border-top: 1px solid var(--color-light-grey);
+    }
+
+    th {
+        border-bottom: 1px solid var(--color-light-grey);
+        display: table-cell;
+        font-weight: var(--font-weight-sans-bold);
+        text-align: left;
+    }
+}

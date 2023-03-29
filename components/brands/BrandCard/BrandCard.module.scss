@@ -1,0 +1,62 @@
+@import 'buttons';
+
+.container {
+    position: relative;
+}
+
+.voiceover {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-large);
+    margin-bottom: var(--spacing-sixth);
+    margin-top: var(--spacing-half);
+}
+
+.caption {
+    color: var(--color-dark-grey);
+    margin-bottom: var(--spacing-two-thirds);
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.button {
+    @extend %buttonPrimary;
+    pointer-events: all;
+    z-index: 4;
+}
+
+.noImage {
+    max-width: 100%;
+    position: relative;
+
+    .caption {
+        align-items: center;
+        bottom: 0;
+        display: flex;
+        font-size: var(--font-size-hero);
+        font-weight: var(--font-weight-sans-bold);
+        justify-content: center;
+        left: 0;
+        line-height: 1;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .ratio {
+        background-color: var(--color-lightest-grey);
+        padding-bottom: 61.803%;
+        width: 100%;
+    }
+}

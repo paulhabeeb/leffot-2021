@@ -1,0 +1,27 @@
+.container {
+    & + & {
+        margin-top: var(--spacing-single);
+    }
+}
+
+.button {
+    display: inline-block;
+    font-weight: var(--font-weight-sans-medium);
+    margin-top: var(--spacing-sixth);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::after {
+        border-right: 2px solid var(--color-primary-dark);
+        border-top: 2px solid var(--color-primary-dark);
+        content: '';
+        display: inline-block;
+        height: 8px;
+        margin-left: var(--spacing-sixth);
+        transform: rotate(45deg);
+        width: 8px;
+    }
+}

@@ -1,0 +1,20 @@
+.circle {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 999;
+}
+
+.dark {
+    background-color: rgba(30, 30, 30, 0.2);
+}
+
+.transparent {
+    background-color: transparent;
+}

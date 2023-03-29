@@ -1,0 +1,65 @@
+@import 'mixins';
+
+.container {
+    @extend %tnum;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+        margin-left: var(--spacing-single);
+        width: 100%;
+    }
+}
+
+.tallyItemWrapper {
+    margin: var(--spacing-single) 0 var(--spacing-half) 0;
+    max-width: 100%;
+    min-width: 200px;
+
+    @include breakpoint('medium') {
+        margin: 0;
+        max-width: 300px;
+    }
+
+    :global(.tally-wrapper) {
+        color: var(--color-dark-grey);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    :global(.tally-total) {
+        border-top: 1px solid var(--color-medium-grey);
+        color: var(--color-not-black);
+        margin-top: var(--spacing-half);
+        padding-top: var(--spacing-half);
+
+        dt,
+        dd {
+            font-weight: var(--font-weight-sans-bold);
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            font-size: var(--font-size-base);
+        }
+    }
+}
+
+.price {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: block;
+    }
+}
+
+.mto {
+    display: block;
+    margin-top: var(--spacing-half);
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.caption {
+    padding-top: var(--spacing-half);
+}
+
+.titleWrapper {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.title {
+    color: var(--color-not-black);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    letter-spacing: 0;
+    margin: 0;
+    margin-right: var(--spacing-half);
+
+    @include breakpoint('small') {
+        font-size: var(--font-size-medium);
+    }
+}

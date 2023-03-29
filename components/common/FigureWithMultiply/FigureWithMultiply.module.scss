@@ -1,0 +1,45 @@
+.figureWithMultiply {
+    background-color: var(--color-lightest-grey);
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 100%;
+    position: relative;
+}
+
+.imageWrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    > span {
+        bottom: 0;
+        left: 0;
+        position: absolute !important;
+        right: 0;
+        top: 0;
+    }
+}
+
+.image {
+    mix-blend-mode: multiply;
+    position: absolute;
+    transition: all 200ms ease;
+}
+
+.oneOfTwo {
+    :global(.productCard:hover) & {
+        opacity: 0;
+    }
+}
+
+.twoOfTwo {
+    opacity: 0;
+
+    :global(.productCard:hover) & {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.menuItemChevron {
+    display: inline-block;
+    fill: var(--color-not-black);
+    height: 30px;
+    margin-left: var(--spacing-sixth);
+    transition: all 150ms ease;
+    vertical-align: middle;
+    width: 30px;
+
+    @include breakpoint('large') {
+        height: 18px;
+        margin-left: var(--spacing-eighth);
+        width: 18px;
+    }
+
+    &.isOpen {
+        margin-top: -3px;
+        transform: rotate(-180deg);
+    }
+}

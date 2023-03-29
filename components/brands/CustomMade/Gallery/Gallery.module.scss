@@ -1,0 +1,28 @@
+@import 'mixins';
+
+.wrapper {
+    background-color: var(--color-pale-gold);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double);
+    }
+}
+
+.title {
+    font-size: var(--font-size-largest);
+}
+
+.paragraph {
+    font-size: var(--font-size-medium-small);
+
+    a {
+        color: var(--color-primary-dark);
+    }
+}

@@ -1,0 +1,35 @@
+@import './DropdownMenuBase';
+
+.submenu {
+    display: none;
+    list-style: none;
+    margin: var(--spacing-sixth) 0 var(--spacing-half);
+
+    &.is-open {
+        display: block;
+    }
+}
+
+.submenuLink {
+    color: var(--color-not-black);
+    font-weight: var(--font-weight-sans-normal);
+    text-decoration: none;
+}
+
+.icon {
+    display: inline-block;
+    margin-left: var(--spacing-sixth);
+    transform: rotate(0);
+    transition: all 150ms ease;
+    vertical-align: middle;
+
+    &.is-open {
+        margin-top: -3px;
+        transform: rotate(-180deg);
+    }
+}
+
+.logoutButton {
+    font-size: var(--font-size-medium);
+    padding: 0;
+}

@@ -1,0 +1,78 @@
+@import 'buttons';
+@import 'mixins';
+
+.card {
+    margin-bottom: var(--spacing-single);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.detailContainer {
+    display: flex;
+    width: 100%;
+
+    @include breakpoint('small') {
+        width: 50%;
+    }
+
+    @include breakpoint('medium') {
+        width: 100%;
+    }
+
+    @include breakpoint('xl') {
+        width: auto;
+    }
+}
+
+.detailWrapper {
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-single);
+    margin-right: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        margin-right: var(--spacing-double);
+    }
+
+    @include breakpoint('large') {
+        width: auto;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.detailTitle {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        flex-basis: 250px;
+    }
+}
+
+.button {
+    @extend %buttonSecondary;
+}

@@ -1,0 +1,18 @@
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint('medium') {
+        margin-bottom: var(--spacing-double);
+    }
+
+    > div {
+        margin-right: var(--spacing-double);
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.container {
+    align-items: center;
+    display: flex;
+    margin-top: var(--spacing-single);
+}
+
+.message {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-medium-small);
+    margin-left: var(--spacing-single);
+}

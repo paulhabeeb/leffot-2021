@@ -1,0 +1,16 @@
+.container {
+    background-color: var(--color-white);
+    padding: var(--spacing-single);
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-sixth);
+}
+
+.conversion {
+    font-size: var(--font-size-medium-large);
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'lnum';
+}

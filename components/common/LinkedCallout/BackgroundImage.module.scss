@@ -1,0 +1,11 @@
+.container {
+    background-color: var(--color-pale-gold);
+    bottom: 0;
+    max-width: 1600px;
+    position: absolute;
+    z-index: 1;
+}
+
+.image {
+    mix-blend-mode: multiply;
+}

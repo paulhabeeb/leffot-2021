@@ -1,0 +1,55 @@
+@import 'mixins';
+
+.itemColInfo {
+    display: block;
+    height: auto;
+    overflow: hidden;
+    padding-top: var(--spacing-single);
+
+    @include breakpoint('medium') {
+        display: table-cell;
+        margin-bottom: var(--spacing-single);
+        padding-right: var(--spacing-single);
+    }
+}
+
+.brand {
+    color: var(--color-dark-grey);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: 0;
+}
+
+.itemName {
+    font-feature-settings: 'lnum';
+    font-variant-numeric: lining-nums;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+    margin: 0;
+
+    @include breakpoint('large') {
+        font-size: var(--font-size-medium-large);
+    }
+
+    a {
+        color: var(--color-not-black);
+        text-decoration: none;
+    }
+}
+
+.itemOptions {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+}
+
+.mobilePrice {
+    display: block;
+    margin-bottom: 0;
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}

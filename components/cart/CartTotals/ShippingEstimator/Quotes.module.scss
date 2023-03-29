@@ -1,0 +1,29 @@
+@import 'buttons';
+
+.shippingQuotesWrapper {
+    margin-top: var(--spacing-single);
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+}
+
+.shippingQuotes {
+    margin: 0;
+}
+
+.quoteLabel {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.quotePrice {
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.button {
+    @extend %buttonPrimary;
+    width: 100%;
+}

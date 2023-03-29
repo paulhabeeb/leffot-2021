@@ -1,0 +1,15 @@
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding-right: 0;
+    width: 100%;
+
+    @include breakpoint('xl') {
+        padding-right: var(--spacing-single);
+        width: 50%;
+    }
+}

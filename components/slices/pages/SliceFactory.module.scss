@@ -1,0 +1,41 @@
+@import 'mixins';
+@import 'text';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 2rem 0;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double) var(--spacing-single);
+    }
+}
+
+.contentWrapper {
+    @extend %textBase;
+    max-width: none;
+    padding: 0 var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        max-width: 650px;
+    }
+}
+
+.sidebar {
+    background-color: var(--color-pale-gold);
+    padding: var(--spacing-single);
+    position: sticky;
+    top: 100px;
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double);
+    }
+}

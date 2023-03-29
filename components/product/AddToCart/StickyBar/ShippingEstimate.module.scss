@@ -1,0 +1,33 @@
+@import 'mixins';
+
+.container {
+    align-items: center;
+    color: var(--color-dark-grey);
+    display: flex;
+    margin-top: var(--spacing-half);
+
+    @include breakpoint('large') {
+        margin-left: var(--spacing-single);
+    }
+
+    @include breakpoint('medium') {
+        margin-top: 0;
+    }
+}
+
+.icon {
+    fill: var(--color-dark-grey);
+    height: 18px;
+    margin-right: var(--spacing-half);
+    width: 18px;
+}
+
+.caption {
+    font-size: 15px;
+    line-height: 1.4;
+    width: 100%;
+
+    @include breakpoint('large') {
+        max-width: 200px;
+    }
+}

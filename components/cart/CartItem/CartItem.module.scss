@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.cartItem {
+    border-bottom: 2px solid var(--color-light-grey);
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        display: table-row-group;
+    }
+}
+
+.cartItemRow {
+    clear: both;
+    display: block;
+    padding-left: 33.33333%;
+
+    @include breakpoint('medium') {
+        display: table-row;
+        padding-left: 0;
+    }
+}

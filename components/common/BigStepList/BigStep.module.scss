@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.step {
+    counter-increment: bigStep;
+    margin-bottom: var(--spacing-half);
+    position: relative;
+
+    &::before {
+        content: counter(bigStep);
+        color: var(--color-primary);
+        display: inline-block;
+        font-size: var(--font-size-largest);
+        font-weight: var(--font-weight-sans-bold);
+        font-variant-numeric: initial;
+        font-feature-settings: initial;
+        margin-left: -1.5rem;
+        position: absolute;
+        top: -0.45rem;
+        width: 1.5rem;
+
+        @include breakpoint(xl) {
+            margin-left: -2rem;
+            width: 2rem;
+        }
+    }
+
+    h3 {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-medium-large);
+    }
+
+    p {
+        font-size: var(--font-size-medium-small);
+    }
+}

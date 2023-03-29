@@ -1,0 +1,106 @@
+@import 'inputs';
+@import 'mixins';
+
+.fieldset {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.imageContainer {
+    flex-basis: 75px;
+    width: 75px;
+
+    img {
+        width: 75px;
+    }
+}
+
+.container {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-left: var(--spacing-half);
+    padding-top: var(--spacing-sixth);
+}
+
+.legend {
+    font-weight: var(--font-weight-sans-medium);
+    margin-bottom: var(--spacing-sixth);
+}
+
+.optionContainer {
+    position: relative;
+}
+
+.toggleButton {
+    @extend %selectInput;
+    font-weight: var(--font-weight-sans-normal);
+    text-align: left;
+}
+
+.options {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-medium-grey);
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    margin-top: -2px;
+    overflow: scroll;
+    padding-top: var(--spacing-half);
+    position: absolute;
+    transition: all 150ms ease;
+    z-index: 50;
+}
+
+.selectedLetterContainer {
+    align-items: center;
+    display: flex;
+}
+
+.selectedLetterImage {
+    margin-right: var(--spacing-third);
+    width: 25px;
+}
+
+%activeLetterSwatch {
+    h3 {
+        color: var(--color-not-black);
+    }
+
+    img {
+        filter: none;
+    }
+}
+
+.archiveSwatchOuter {
+    border: 0;
+    box-shadow: none;
+    width: 50%;
+
+    @include breakpoint('medium') {
+        width: 33%;
+    }
+
+    input:checked + & {
+        @extend %activeLetterSwatch;
+    }
+}
+
+.archiveSwatchInner {
+    h3,
+    img {
+        color: var(--color-dark-grey);
+        transition: all 150ms ease;
+    }
+
+    img {
+        filter: opacity(50%);
+    }
+
+    &:hover {
+        @extend %activeLetterSwatch;
+    }
+}

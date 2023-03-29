@@ -1,0 +1,15 @@
+@import 'mixins';
+
+.itemsTable {
+    display: block;
+    list-style: none;
+    margin: var(--spacing-single) 0 0;
+    padding: 0;
+    width: 100%;
+
+    @include breakpoint('small') {
+        border-bottom: 1px solid var(--color-light-grey);
+        display: table;
+        margin: 0;
+    }
+}

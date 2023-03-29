@@ -1,0 +1,7 @@
+@import 'buttons';
+
+.button {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+    width: 100%;
+}

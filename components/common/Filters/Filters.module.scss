@@ -1,0 +1,32 @@
+@import 'mixins';
+
+.filters {
+    background-color: var(--color-white);
+    margin-bottom: 0;
+    padding: 0;
+    position: sticky;
+    top: 71px;
+    width: 100%;
+    z-index: 7;
+
+    @include breakpoint('medium') {
+        padding: 0 var(--spacing-single) 0 0;
+        position: relative;
+        top: initial;
+        width: 275px;
+        z-index: initial;
+    }
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-single);
+    }
+}
+
+.header {
+    margin-bottom: var(--spacing-half);
+}
+
+.title {
+    font-size: var(--font-size-medium-large);
+    margin-bottom: var(--spacing-half);
+}

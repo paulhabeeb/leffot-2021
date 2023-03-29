@@ -1,0 +1,17 @@
+@import 'mixins';
+@import 'text';
+
+.container {
+    @extend %textBase;
+    max-width: none;
+    padding: 0;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        max-width: 1000px;
+    }
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-single);
+    }
+}

@@ -1,0 +1,12 @@
+@import 'mixins';
+
+.header {
+    color: var(--color-dark-grey);
+    display: none;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+
+    @include breakpoint('small') {
+        display: table-row;
+    }
+}

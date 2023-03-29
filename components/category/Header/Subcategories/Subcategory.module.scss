@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.category {
+    margin-bottom: var(--spacing-third);
+    margin-right: var(--spacing-two-thirds);
+
+    @include breakpoint('large') {
+        margin-right: var(--spacing-single);
+    }
+}
+
+.link {
+    border-bottom: 2px solid transparent;
+    color: var(--color-not-black);
+    font-weight: var(--font-weight-sans-bold);
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+        border-bottom-color: var(--color-primary);
+    }
+}

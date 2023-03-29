@@ -1,0 +1,46 @@
+@import 'inputs';
+
+.container {
+    border-bottom: 1px solid var(--color-light-grey);
+    padding: 0 0 var(--spacing-third) 0;
+    position: relative;
+    width: 100%;
+
+    &:focus {
+        @extend %inputFocus;
+    }
+}
+
+.button {
+    color: var(--color-not-black);
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    letter-spacing: 0.25px;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 5;
+
+    &:focus {
+        @extend %inputFocus;
+    }
+}
+
+.clear {
+    color: var(--color-dark-grey);
+    display: none;
+    font-size: var(--font-size-small);
+    padding-right: var(--spacing-third);
+    text-decoration: none;
+}
+
+.indicator {
+    color: var(--color-dark-grey);
+    display: inline-block;
+    font-size: var(--font-size-medium-large);
+    margin-top: -5px;
+    position: absolute;
+    right: 0;
+}

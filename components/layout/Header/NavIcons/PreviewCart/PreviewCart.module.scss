@@ -1,0 +1,55 @@
+@import 'mixins';
+
+.previewCart {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 1px;
+    box-shadow: 0 3px 12px rgba(31, 31, 31, 0.15);
+    left: auto;
+    max-width: none;
+    min-width: 200px;
+    padding: var(--spacing-two-thirds);
+    position: absolute;
+    right: -14px;
+    top: 30px;
+    width: auto;
+
+    &::after,
+    &::before {
+        border-bottom-style: solid;
+        bottom: 100%;
+        content: '';
+        display: block;
+        height: 0;
+        left: auto;
+        position: absolute;
+        width: 0;
+    }
+
+    &::after {
+        border: inset 8px;
+        border-color: transparent transparent var(--color-white) transparent;
+        right: calc(var(--spacing-half) - 3px);
+
+        @include breakpoint('medium') {
+            right: calc(var(--spacing-half) + 2px);
+        }
+    }
+
+    &::before {
+        border: inset 10px;
+        border-color: transparent transparent var(--color-light-grey)
+            transparent;
+        right: calc(var(--spacing-half) - 5px);
+
+        @include breakpoint('medium') {
+            right: var(--spacing-half);
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 75rem;
+    width: 100%;
+}

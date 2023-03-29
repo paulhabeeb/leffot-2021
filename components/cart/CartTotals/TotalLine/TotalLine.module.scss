@@ -1,0 +1,10 @@
+.totalLine {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divider {
+    border-top: 2px solid var(--color-light-grey);
+    margin-top: var(--spacing-two-thirds);
+    padding-top: var(--spacing-two-thirds);
+}

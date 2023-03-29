@@ -1,0 +1,32 @@
+@import 'buttons';
+@import 'mixins';
+
+.showMoreContainer {
+    padding-top: var(--spacing-third);
+}
+
+.showMore {
+    @extend %buttonSubtle;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        font-size: var(--font-size-small);
+        padding: var(--spacing-sixth);
+    }
+}
+
+.mobileLabel {
+    display: inline;
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}
+
+.desktopLabel {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: inline;
+    }
+}

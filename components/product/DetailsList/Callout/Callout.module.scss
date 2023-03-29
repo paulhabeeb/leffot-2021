@@ -1,0 +1,26 @@
+.container {
+    background-color: var(--color-lightest-grey);
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-single);
+    padding: var(--spacing-single);
+
+    a {
+        color: var(--color-primary-dark);
+    }
+
+    p {
+        margin-bottom: 0;
+
+        + p {
+            margin-top: var(--spacing-single);
+        }
+    }
+}
+
+.title {
+    color: var(--color-primary-dark);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-third);
+    text-transform: uppercase;
+}

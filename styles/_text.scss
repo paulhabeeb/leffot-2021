@@ -1,0 +1,36 @@
+%textBase {
+    font-size: var(--font-size-medium-small);
+
+    h2 {
+        font-size: var(--font-size-largest);
+    }
+
+    h3 {
+        font-family: var(--font-sans);
+        font-size: var(--font-size-medium-large);
+    }
+
+    h4 {
+        color: var(--color-dark-grey);
+        font-family: var(--font-sans);
+        font-size: var(--font-size-medium-small);
+        font-weight: var(--font-weight-sans-medium);
+    }
+
+    ul {
+        list-style: disc;
+        margin-bottom: var(--spacing-single);
+        margin-left: 1.15rem;
+    }
+
+    li {
+        margin-bottom: var(--spacing-half);
+    }
+
+    :global(.button-large),
+    :global(.button-secondary) {
+        a {
+            color: var(--color-white);
+        }
+    }
+}

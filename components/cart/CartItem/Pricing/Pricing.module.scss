@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.price {
+    @extend %tnum;
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.discounted {
+    margin-right: var(--spacing-half);
+    position: relative;
+
+    &::after {
+        border-top: 2px solid #222;
+        content: '';
+        display: block;
+        left: -5%;
+        opacity: 0.41;
+        position: absolute;
+        top: 45%;
+        transform: rotate(-5deg);
+        width: 103%;
+    }
+}

@@ -1,0 +1,24 @@
+@import 'mixins';
+
+.container {
+    display: block;
+    background-color: var(--color-lightest-grey);
+    flex-grow: 1;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 71px);
+        margin-bottom: var(--spacing-double);
+        padding: 0 var(--spacing-half);
+        position: sticky;
+        top: 71px;
+        width: 60%;
+    }
+}

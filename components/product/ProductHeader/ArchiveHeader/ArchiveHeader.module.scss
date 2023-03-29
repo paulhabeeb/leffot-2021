@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.eta {
+    display: block;
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}

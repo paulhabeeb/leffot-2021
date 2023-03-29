@@ -1,0 +1,36 @@
+@import 'mixins';
+
+.formRow {
+    margin-bottom: var(--spacing-two-thirds);
+    width: 100%;
+
+    &.noMargin {
+        margin-bottom: 0;
+    }
+}
+
+.formRowFlex {
+    display: flex;
+}
+
+%formRowGrid {
+    display: grid;
+    grid-gap: var(--spacing-half);
+    grid-template-columns: 1fr;
+}
+
+.formRowHalf {
+    @extend %formRowGrid;
+
+    @include breakpoint('small') {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formRowThird {
+    @extend %formRowGrid;
+
+    @include breakpoint('small') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

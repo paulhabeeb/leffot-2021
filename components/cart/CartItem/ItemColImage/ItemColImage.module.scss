@@ -1,0 +1,28 @@
+@import 'mixins';
+
+.itemColImage {
+    display: block;
+    float: left;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: -50%;
+    padding-right: var(--spacing-half);
+    padding-top: var(--spacing-single);
+    position: relative;
+    vertical-align: top;
+    width: 50%;
+
+    @include breakpoint('small') {
+        display: table-cell;
+    }
+
+    @include breakpoint('medium') {
+        float: none;
+        padding-right: var(--spacing-single);
+        width: 125px;
+    }
+
+    @include breakpoint('large') {
+        width: 150px;
+    }
+}

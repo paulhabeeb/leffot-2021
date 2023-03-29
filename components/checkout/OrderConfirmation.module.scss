@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.container {
+    font-size: var(--font-size-medium-small);
+    margin: 0 auto;
+    max-width: 650px;
+    padding: var(--spacing-single) var(--spacing-single) var(--spacing-double);
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double) var(--spacing-single) 6rem;
+    }
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-huge);
+    letter-spacing: 0.25px;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-single);
+    padding: 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium);
+    letter-spacing: 0.25px;
+    margin-bottom: var(--spacing-quarter);
+    padding: 0;
+}
+
+.searchForm {
+    margin-top: var(--spacing-double);
+}

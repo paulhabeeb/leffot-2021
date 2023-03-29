@@ -1,0 +1,114 @@
+@import 'buttons';
+@import 'mixins';
+
+.itemWrapper {
+    background-color: var(--color-lightest-grey);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-size-base);
+    gap: var(--spacing-half);
+    margin: var(--spacing-half) 0;
+    padding: var(--spacing-single);
+    transition: border 300ms ease;
+
+    &.selected {
+        background-color: var(--color-white);
+        border-color: var(--color-primary);
+    }
+
+    @include breakpoint('small') {
+        flex-wrap: nowrap;
+    }
+}
+
+.leftWrapper {
+    flex-grow: 1;
+}
+
+.item {
+    display: flex;
+}
+
+.rightWrapper {
+    margin-top: var(--spacing-half);
+    width: 100%;
+
+    @include breakpoint('small') {
+        margin: 0;
+        width: unset;
+    }
+}
+
+.itemImage {
+    border: 2px solid var(--color-white);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-half);
+    margin: var(--spacing-half) 0;
+
+    @include breakpoint('small') {
+        margin: 0;
+        margin-left: 100px;
+    }
+
+    > div {
+        width: 100%;
+
+        @include breakpoint('small') {
+            width: unset;
+        }
+    }
+}
+
+.addToReturnButton {
+    @extend %buttonSecondary;
+    width: 100%;
+
+    &::after {
+        color: transparent;
+        content: attr(title);
+        display: block;
+        font-weight: var(--font-weight-sans-bold);
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.iconContainer {
+    margin-right: var(--spacing-sixth);
+
+    svg {
+        display: inline-block;
+        height: 24px;
+        margin-top: -4px;
+        stroke: var(--color-white);
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+        vertical-align: middle;
+        width: 24px;
+    }
+
+    .checkmarkCheck {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 300ms cubic-bezier(0.65, 0, 0.45, 1) 100ms forwards;
+    }
+}
+
+.remove {
+    @extend %buttonSecondaryDestructive;
+    width: 100%;
+}

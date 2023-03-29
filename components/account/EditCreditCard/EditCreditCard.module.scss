@@ -1,0 +1,41 @@
+.container {
+    max-width: 550px;
+    width: 100%;
+}
+
+.title {
+    border-bottom: 2px solid var(--color-light-grey);
+    color: var(--color-dark-grey);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    letter-spacing: 0.75px;
+    margin: var(--spacing-single) 0;
+    padding-bottom: var(--spacing-sixth);
+    text-transform: uppercase;
+}
+
+.cardInfo {
+    margin-bottom: var(--spacing-double);
+}
+
+.cardData {
+    display: flex;
+
+    div {
+        font-size: var(--font-size-medium-small);
+        margin-right: var(--spacing-double);
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.cardNumber {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: 0;
+    text-transform: none;
+}

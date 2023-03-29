@@ -1,0 +1,58 @@
+@import 'buttons';
+@import 'mixins';
+
+.container {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: var(--spacing-double) var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        padding: var(--spacing-double);
+    }
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-largest);
+    letter-spacing: 0.25px;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-single);
+    padding: 0;
+}
+
+.caption {
+    font-size: var(--font-size-medium-small);
+}
+
+.result {
+    display: flex;
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-single);
+}
+
+.codeWrapper {
+    margin-right: var(--spacing-double);
+}
+
+.resultTitle {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: 0;
+}
+
+.submitButton {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+    width: 100%;
+}
+
+.checkAgainButton {
+    @extend %buttonSecondary;
+    @extend %buttonSizeLarge;
+    width: 100%;
+}
+
+.error {
+    margin-top: var(--spacing-single);
+}

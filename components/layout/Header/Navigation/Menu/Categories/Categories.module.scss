@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.viewAllCats {
+    display: block;
+
+    @include breakpoint('large') {
+        display: none;
+    }
+}

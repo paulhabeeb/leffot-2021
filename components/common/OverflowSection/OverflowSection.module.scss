@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-gap: var(--spacing-third);
+
+    &.hasTopPadding {
+        display: block;
+        grid-gap: initial;
+        margin-top: var(--spacing-single);
+    }
+}
+
+.bottomPadding {
+    margin-bottom: var(--spacing-single);
+}

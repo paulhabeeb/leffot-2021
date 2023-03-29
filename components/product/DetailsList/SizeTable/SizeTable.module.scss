@@ -1,0 +1,64 @@
+@import 'mixins';
+
+.container {
+    @extend %tnum;
+
+    table {
+        margin: 0;
+        width: 100%;
+    }
+
+    th,
+    td {
+        background-clip: padding-box; // fix Firefox bug
+        display: table-cell;
+        padding: var(--spacing-third) var(--spacing-single);
+        text-align: left;
+    }
+
+    th:first-of-type {
+        left: 0;
+        position: sticky;
+    }
+
+    thead th {
+        background-color: var(--color-white);
+    }
+
+    tbody {
+        td,
+        th {
+            border-top: 1px solid var(--color-light-grey);
+        }
+
+        tr:nth-of-type(even) {
+            td {
+                background-color: rgba(
+                    255,
+                    255,
+                    255,
+                    0.1
+                ); // transparent background so drop shadow appears
+            }
+
+            th {
+                background-color: var(--color-white);
+            }
+        }
+
+        tr:nth-of-type(odd) {
+            td {
+                background-color: rgba(
+                    200,
+                    200,
+                    200,
+                    0.1
+                ); // transparent background so drop shadow appears
+            }
+
+            th {
+                background-color: rgb(249, 249, 249);
+            }
+        }
+    }
+}

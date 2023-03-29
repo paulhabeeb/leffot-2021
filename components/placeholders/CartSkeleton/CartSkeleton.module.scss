@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.container {
+    svg {
+        width: 100%;
+    }
+}
+
+.mobile {
+    align-items: center;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}
+
+.desktop {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: block;
+    }
+}

@@ -1,0 +1,15 @@
+@import 'mixins';
+
+.mobileCustomerNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--spacing-double) 0;
+
+    @include breakpoint('large') {
+        align-items: center;
+        display: none;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

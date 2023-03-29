@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+
+    @include breakpoint('large') {
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

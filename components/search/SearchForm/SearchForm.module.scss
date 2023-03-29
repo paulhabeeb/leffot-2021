@@ -1,0 +1,16 @@
+@import 'buttons';
+@import 'inputs';
+
+.form {
+    display: flex;
+
+    &.isNarrow {
+        max-width: 800px;
+        width: 100%;
+    }
+}
+
+.button {
+    @extend %buttonSecondary;
+    margin-left: var(--spacing-half);
+}

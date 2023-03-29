@@ -1,0 +1,25 @@
+@import 'inputs';
+
+.skipNav {
+    background: var(--color-dark-grey);
+    color: var(--color-white);
+    font-weight: var(--font-weight-sans-bold);
+    outline: 3px solid var(--color-primary);
+    padding: var(--spacing-two-thirds);
+    position: absolute;
+    text-decoration: none;
+    top: -90em;
+    transition: top 0.3s ease-in-out;
+    z-index: 500;
+
+    &:focus {
+        @extend %inputFocus;
+        left: 3px;
+        top: 3px;
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--color-white);
+    }
+}

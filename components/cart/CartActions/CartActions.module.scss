@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.top {
+    margin-bottom: var(--spacing-double);
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}

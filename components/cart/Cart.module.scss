@@ -1,0 +1,43 @@
+@import 'mixins';
+
+.page {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.pageContent {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-single) var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        padding: var(--spacing-double) var(--spacing-single);
+    }
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double) var(--spacing-double);
+    }
+}
+
+.pageHeading {
+    font-size: var(--font-size-huge);
+    margin: 0 0 var(--spacing-single);
+    text-align: left;
+}
+
+.cartWrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+        padding-bottom: var(--spacing-double);
+    }
+}
+
+.cartCaption {
+    font-size: var(--font-size-medium);
+}

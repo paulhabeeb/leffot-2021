@@ -1,0 +1,25 @@
+@import 'buttons';
+
+.overlay {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+}
+
+.button {
+    @extend %buttonSecondary;
+    margin: var(--spacing-single) 0;
+    width: 100%;
+}

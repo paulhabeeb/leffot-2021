@@ -1,0 +1,58 @@
+@import 'buttons';
+
+.eventCard {
+    position: relative;
+}
+
+.voiceover {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.tag {
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    font-weight: var(--font-weight-sans-bold);
+    left: var(--spacing-half);
+    padding: var(--spacing-sixth) var(--spacing-third);
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.imageContainer {
+    display: flex;
+}
+
+.image {
+    display: block;
+}
+
+.details {
+    background-color: var(--color-lightest-grey);
+    padding: 1.25rem 1.25rem var(--spacing-single);
+}
+
+.title {
+    font-size: var(--font-size-largest);
+    line-height: 1;
+    margin-bottom: var(--spacing-third);
+}
+
+.date {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    line-height: 1.45;
+    margin-bottom: var(--spacing-half);
+}
+
+.button {
+    @extend %buttonPrimary;
+    pointer-events: all;
+    z-index: 4;
+}

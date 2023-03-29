@@ -1,0 +1,9 @@
+.link {
+    color: var(--color-not-black);
+    font-weight: var(--font-weight-sans-bold);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.wrapper {
+    background-color: var(--color-lightest-grey);
+    border-bottom: 1px solid var(--color-light-grey);
+    padding-top: var(--spacing-two-thirds);
+}
+
+.transparentBackground {
+    @include breakpoint('small') {
+        background-color: transparent;
+    }
+}
+
+.tabs {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 var(--spacing-single);
+    white-space: nowrap;
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-double);
+    }
+}

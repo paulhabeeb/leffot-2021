@@ -1,0 +1,21 @@
+@import 'inputs';
+
+.hoverSwatch {
+    @extend %rectangleInput;
+    border-width: 2px;
+    padding: 2px;
+    font-size: 0;
+    position: relative;
+
+    input:checked + & {
+        > img + div button {
+            background-color: var(--color-white);
+            border-color: var(--color-dark-grey);
+            color: var(--color-dark-grey);
+        }
+    }
+
+    .tippy-box {
+        outline: 0;
+    }
+}

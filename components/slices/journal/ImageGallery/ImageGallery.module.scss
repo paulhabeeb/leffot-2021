@@ -1,0 +1,12 @@
+@import 'slick';
+
+.container {
+    @extend %slickBase;
+    @extend %largeGallery;
+
+    :global(.slick-dots) {
+        @include breakpoint('medium') {
+            margin-bottom: var(--spacing-double);
+        }
+    }
+}

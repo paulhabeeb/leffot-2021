@@ -1,0 +1,16 @@
+@import 'buttons';
+
+.button {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+    width: 100%;
+}
+
+.forgot {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+
+    &:hover {
+        text-decoration: none;
+    }
+}

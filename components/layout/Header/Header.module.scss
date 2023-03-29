@@ -1,0 +1,140 @@
+@import 'mixins';
+
+.header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-light-grey);
+    position: sticky;
+    top: 0;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    z-index: 50;
+
+    @include breakpoint('large') {
+        overflow: visible;
+    }
+
+    &.isOpen {
+        background-color: var(--color-lightest-grey);
+        box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.1);
+        bottom: 0;
+        height: 100%;
+        overflow: auto;
+        padding: 0;
+        position: fixed;
+
+        @include breakpoint('small') {
+            width: 50%;
+        }
+
+        @include breakpoint('medium') {
+            width: 33.333%;
+        }
+
+        @include breakpoint('large') {
+            height: auto;
+        }
+    }
+}
+
+.headerWrapper {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-double);
+    }
+
+    .header.isOpen & {
+        padding: 0;
+    }
+}
+
+.mobileMenuToggle {
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 0;
+    height: 4.375rem;
+    overflow: hidden;
+    padding: 0;
+    width: 4.375rem;
+    z-index: 50;
+
+    @include breakpoint('large') {
+        display: none;
+    }
+
+    .header.isOpen & {
+        left: var(--spacing-single);
+        position: absolute;
+        top: var(--spacing-quarter);
+    }
+}
+
+%bar {
+    background: var(--color-not-black);
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: transform 100ms ease-in, top 100ms ease-in 150ms,
+        bottom 100ms ease-in 150ms;
+    width: 20px;
+}
+
+.mobileMenuToggleText {
+    @extend %bar;
+    transition: background-color 10ms ease-in 100ms;
+
+    &::before {
+        @extend %bar;
+        top: -0.5rem;
+    }
+
+    &::after {
+        @extend %bar;
+        bottom: -0.5rem;
+    }
+
+    .header.isOpen & {
+        background-color: transparent;
+        transition-delay: 100ms;
+
+        &::before,
+        &::after {
+            background-color: var(--color-not-black);
+            bottom: auto;
+            top: auto;
+            transition: transform 100ms ease-in 150ms, top 100ms ease-in,
+                bottom 100ms ease-in;
+        }
+        &::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.logoWrapper {
+    padding: var(--spacing-two-thirds) 0;
+    position: relative;
+
+    &.hideLogo {
+        display: none;
+    }
+}
+
+.logo {
+    width: 120px;
+}

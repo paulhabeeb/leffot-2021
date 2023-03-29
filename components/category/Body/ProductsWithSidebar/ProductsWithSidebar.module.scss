@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.products {
+    flex-grow: 1;
+    padding: var(--spacing-half);
+    width: 100%;
+
+    &.oneUp {
+        padding: var(--spacing-single);
+    }
+
+    @include breakpoint('small') {
+        padding: var(--spacing-single);
+    }
+
+    @include breakpoint('medium') {
+        padding: 0 0 var(--spacing-single) 0;
+    }
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-single);
+    }
+}

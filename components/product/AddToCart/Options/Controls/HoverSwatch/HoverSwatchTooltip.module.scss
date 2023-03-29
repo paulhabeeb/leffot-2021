@@ -1,0 +1,71 @@
+@import 'mixins';
+
+.container {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-grey);
+    padding: var(--spacing-third);
+    width: 250px;
+    z-index: 5;
+}
+
+.label {
+    display: block;
+    font-size: var(--font-size-base);
+    margin-top: var(--spacing-half);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.button {
+    background-color: var(--color-dark-grey);
+    border: 1px solid var(--color-dark-grey);
+    color: var(--color-white);
+    display: block;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-medium);
+    margin-top: var(--spacing-half);
+    padding: var(--spacing-sixth);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.checkmark {
+    display: none;
+    margin-right: var(--spacing-sixth);
+
+    svg {
+        display: inline-block;
+        height: 24px;
+        margin-top: -4px;
+        stroke: var(--color-white);
+        stroke-miterlimit: 10px;
+        stroke-width: 4px;
+        vertical-align: middle;
+        width: 24px;
+    }
+
+    &.isSelected {
+        display: inline-block;
+
+        svg {
+            stroke: var(--color-dark-grey);
+        }
+
+        .checkmarkCheck {
+            animation: stroke 300ms cubic-bezier(0.65, 0, 0.45, 1) 300ms
+                forwards;
+            stroke-dasharray: 48px;
+            stroke-dashoffset: 48px;
+            transform-origin: 50% 50%;
+        }
+    }
+}

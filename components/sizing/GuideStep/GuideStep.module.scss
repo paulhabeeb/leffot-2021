@@ -1,0 +1,23 @@
+.step {
+    p {
+        color: var(--color-dark-grey);
+    }
+}
+
+.isActive {
+    margin-bottom: var(--spacing-double);
+}
+
+.isComplete {
+    &::before,
+    h3 {
+        color: var(--color-dark-grey);
+    }
+}
+
+.isDisabled {
+    &::before,
+    h3 {
+        color: var(--color-disabled);
+    }
+}

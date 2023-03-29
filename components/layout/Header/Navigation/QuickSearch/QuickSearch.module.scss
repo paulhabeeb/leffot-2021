@@ -1,0 +1,29 @@
+@import 'mixins';
+
+.quickSearch {
+    display: block;
+    margin: var(--spacing-two-thirds) var(--spacing-single) var(--spacing-half)
+        4rem;
+
+    @include breakpoint('large') {
+        display: none;
+        margin: 0;
+        position: relative;
+        z-index: 50;
+    }
+
+    &.isOpen {
+        display: block;
+    }
+}
+
+.container {
+    margin-top: 4px;
+
+    @include breakpoint('large') {
+        background-color: var(--color-white);
+        padding: 0;
+        position: absolute;
+        width: 100%;
+    }
+}

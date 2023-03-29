@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.dropdown {
+    display: none;
+    padding: var(--spacing-sixth) 0 var(--spacing-half);
+    position: relative;
+
+    @include breakpoint('large') {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-light-grey);
+        border-top: 0;
+        box-shadow: 5px 10px 10px -5px rgba(31, 31, 31, 0.15);
+        margin-left: -var(--spacing-single);
+        outline: 0;
+        padding: var(--spacing-half) 0;
+        position: absolute;
+        text-align: left;
+        top: calc(100% + 1px);
+    }
+}
+
+.dropdown.is-open {
+    display: block;
+}
+
+.dropdownList {
+    list-style: none;
+    margin: var(--spacing-quarter) var(--spacing-half) var(--spacing-quarter) 0;
+    padding: 0;
+
+    @include breakpoint('large') {
+        column-count: 3;
+        margin: auto;
+    }
+}

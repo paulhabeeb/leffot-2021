@@ -1,0 +1,9 @@
+.hangtag {
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+    left: var(--spacing-half);
+    padding: var(--spacing-sixth) var(--spacing-half);
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}

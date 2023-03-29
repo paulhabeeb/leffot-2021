@@ -1,0 +1,35 @@
+@import 'buttons';
+
+.container {
+    margin: var(--spacing-double) 0;
+}
+
+.amount {
+    position: relative;
+
+    input,
+    span {
+        font-variant-numeric: lining-nums;
+        font-feature-settings: 'lnum';
+    }
+
+    input {
+        padding-left: 1.65rem;
+    }
+
+    span {
+        position: absolute;
+        left: var(--spacing-two-thirds);
+        top: 2.35rem;
+    }
+}
+
+.button {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+    width: 100%;
+}
+
+.error {
+    margin-bottom: var(--spacing-single);
+}

@@ -1,0 +1,17 @@
+@import 'mixins';
+
+.smallPromos {
+    display: grid;
+    grid-gap: var(--spacing-single);
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-double) var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('large') {
+        grid-gap: var(--spacing-double);
+        grid-template-columns: 1fr 1fr;
+        padding: var(--spacing-double);
+    }
+}

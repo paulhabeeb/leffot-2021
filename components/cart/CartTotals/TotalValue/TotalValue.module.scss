@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.value {
+    @extend %tnum;
+    padding: var(--spacing-sixth) 0;
+    text-align: right;
+    width: 50%;
+}
+
+.largeValue {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-sans-bold);
+    padding: var(--spacing-eighth);
+}

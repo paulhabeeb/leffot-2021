@@ -1,0 +1,62 @@
+@import 'mixins';
+
+.backgroundImage {
+    background-position: center center;
+    background-size: 1200px auto;
+
+    @include breakpoint('medium') {
+        background-size: 100% auto;
+    }
+}
+
+.container {
+    background-color: var(--color-lightest-grey);
+    padding: var(--spacing-single);
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double);
+    }
+
+    &.backgroundImageOverlay {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.insideWrapper {
+    margin: 0 auto;
+    max-width: calc(1600px - 6rem);
+    width: 100%;
+}
+
+%fontColor {
+    color: var(--color-not-black);
+
+    &.backgroundImageTitle {
+        color: var(--color-white);
+    }
+}
+
+.title {
+    @extend %fontColor;
+    font-size: var(--font-size-huge);
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'lnum';
+    line-height: 1.2;
+    margin: var(--spacing-half) 0 var(--spacing-single);
+}
+
+.caption {
+    @extend %fontColor;
+    font-size: var(--font-size-medium);
+    max-width: 650px;
+}
+
+.highlight {
+    background-color: var(--color-primary);
+    border-radius: 1px;
+    color: var(--color-white);
+    display: inline-block;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-sans-bold);
+    padding: var(--spacing-eighth) var(--spacing-third);
+}

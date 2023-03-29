@@ -1,0 +1,24 @@
+@import 'buttons';
+
+.container {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    width: 100%;
+}
+
+.button {
+    @extend %buttonSecondary;
+    @extend %buttonSizeLarge;
+    max-width: 200px;
+    width: 100%;
+}
+
+.message {
+    border-top: 2px solid var(--color-light-grey);
+    margin: var(--spacing-two-thirds) auto 0;
+    max-width: 300px;
+    padding-top: 2.5rem;
+}

@@ -1,0 +1,42 @@
+@import 'mixins';
+
+%videoBase {
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.large {
+    display: block;
+    width: 100%;
+
+    @include breakpoint('large') {
+        width: 65%;
+    }
+
+    &.video {
+        @extend %videoBase;
+        padding-bottom: 56.25%;
+
+        @include breakpoint('large') {
+            padding-bottom: 38.25%;
+        }
+    }
+}
+
+.small {
+    margin-bottom: var(--spacing-two-thirds);
+
+    &.video {
+        @extend %videoBase;
+        padding-bottom: 56.25%;
+    }
+}

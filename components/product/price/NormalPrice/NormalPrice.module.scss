@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.finalSale {
+    color: var(--color-red);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    margin-top: var(--spacing-half);
+}
+
+.mto {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: block;
+    }
+}

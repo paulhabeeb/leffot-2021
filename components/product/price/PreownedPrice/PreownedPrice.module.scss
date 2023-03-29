@@ -1,0 +1,20 @@
+%priceTag {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    margin-right: var(--spacing-third);
+}
+
+.ourPrice {
+    @extend %priceTag;
+    color: var(--color-primary);
+}
+
+.originalPrice {
+    @extend %priceTag;
+    color: var(--color-dark-grey);
+}
+
+.salePrice {
+    @extend %priceTag;
+    color: var(--color-red);
+}

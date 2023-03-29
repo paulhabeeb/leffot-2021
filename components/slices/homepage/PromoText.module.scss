@@ -1,0 +1,26 @@
+@import 'mixins';
+
+.title {
+    font-family: var(--font-serif);
+    font-feature-settings: 'lnum';
+    font-size: var(--font-size-xl);
+    font-variant-numeric: lining-nums;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-half);
+
+    &.large {
+        font-size: var(--font-size-huge);
+
+        @include breakpoint('large') {
+            font-size: var(--font-size-hero);
+        }
+    }
+}
+
+.caption {
+    font-size: var(--font-size-medium);
+
+    p + p {
+        margin-top: var(--spacing-single);
+    }
+}

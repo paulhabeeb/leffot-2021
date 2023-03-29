@@ -1,0 +1,17 @@
+@import 'mixins';
+@import 'slick';
+
+.gallery {
+    background-color: var(--color-lightest-grey);
+    position: relative;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        width: 75%;
+    }
+}
+
+.slick {
+    @extend %slickBase;
+    @extend %largeGreyGallery;
+}

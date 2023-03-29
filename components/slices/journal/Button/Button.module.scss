@@ -1,0 +1,15 @@
+@import 'buttons';
+
+.button {
+    margin: var(--spacing-double) 0;
+    text-align: center;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+        @extend %buttonPrimary;
+        @extend %buttonSizeLarge;
+    }
+}

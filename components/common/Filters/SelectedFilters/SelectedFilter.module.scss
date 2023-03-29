@@ -1,0 +1,26 @@
+.filter {
+    display: inline-block;
+}
+
+.button {
+    border-radius: 2px;
+    color: var(--color-not-black);
+    display: flex;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sixth);
+    margin-right: var(--spacing-third);
+    padding: 0 var(--spacing-eighth);
+    transition: all 300ms ease;
+
+    &:hover {
+        background-color: var(--color-light-grey);
+    }
+}
+
+.close {
+    color: var(--color-dark-grey);
+    display: block;
+    font-weight: var(--font-weight-sans-bold);
+    margin-right: var(--spacing-sixth);
+}

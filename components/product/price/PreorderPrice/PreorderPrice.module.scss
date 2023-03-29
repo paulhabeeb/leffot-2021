@@ -1,0 +1,19 @@
+.priceGrid {
+    display: grid;
+    font-variant-numeric: initial;
+    font-feature-settings: initial;
+    grid-template-columns: repeat(3, 1fr);
+
+    dd,
+    dt {
+        margin-bottom: 0;
+    }
+
+    dt {
+        font-weight: var(--font-weight-sans-bold);
+    }
+
+    dd {
+        font-size: var(--font-size-medium-large);
+    }
+}

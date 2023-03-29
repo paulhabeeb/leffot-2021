@@ -1,0 +1,77 @@
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    position: initial;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+        max-width: 1600px;
+        padding: 2rem var(--spacing-single) var(--spacing-triple);
+    }
+}
+
+.sidebar {
+    background-color: var(--color-white);
+    display: none;
+    flex-basis: 275px;
+    float: left;
+    margin-bottom: 0;
+    padding: 0;
+    position: sticky;
+    top: 71px;
+    width: 100%;
+    z-index: 7;
+
+    @include breakpoint('medium') {
+        display: block;
+        padding: 0 var(--spacing-single) 0 0;
+        position: relative;
+        top: initial;
+        width: 275px;
+        z-index: initial;
+    }
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-single);
+    }
+}
+
+.products {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: var(--spacing-half);
+
+    @include breakpoint('small') {
+        padding: var(--spacing-single);
+    }
+
+    @include breakpoint('medium') {
+        padding: 0 0 var(--spacing-single) 0;
+    }
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-single);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-gap: var(--spacing-half);
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        grid-gap: var(--spacing-single);
+    }
+
+    @include breakpoint('large') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

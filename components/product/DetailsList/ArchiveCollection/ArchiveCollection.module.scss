@@ -1,0 +1,51 @@
+@import 'buttons';
+
+.container {
+    margin-bottom: var(--spacing-double);
+}
+
+.gradient {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgb(255, 255, 255)
+    );
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+    opacity: 1;
+    position: relative;
+    transition: all 200ms ease;
+    z-index: 5;
+
+    &.isOpen {
+        opacity: 0;
+    }
+}
+
+.inspiration {
+    padding-top: var(--spacing-single);
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium);
+    margin-bottom: 0;
+}
+
+.caption {
+    color: var(--color-dark-grey);
+    margin-bottom: var(--spacing-third);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--spacing-sixth);
+    margin-bottom: var(--spacing-two-thirds);
+}
+
+.viewMoreButton {
+    @extend %buttonSubtle;
+    width: 100%;
+}

@@ -1,0 +1,12 @@
+.error {
+    color: var(--color-red);
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-sans-medium);
+    margin-top: var(--spacing-third);
+
+    &.inline {
+        display: inline-block;
+        margin-left: var(--spacing-single);
+        margin-top: 0;
+    }
+}

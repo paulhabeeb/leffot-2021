@@ -1,0 +1,33 @@
+@import 'mixins';
+
+.container {
+    background-color: var(--color-pale-gold);
+}
+
+.nav {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: var(--spacing-single) var(--spacing-double);
+    }
+}
+
+.title {
+    font-size: var(--font-size-medium-large);
+}
+
+.list {
+    column-count: 2;
+
+    @include breakpoint('small') {
+        column-count: 3;
+    }
+
+    @include breakpoint('medium') {
+        column-count: initial;
+        display: flex;
+    }
+}

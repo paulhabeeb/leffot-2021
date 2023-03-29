@@ -1,0 +1,31 @@
+@import 'inputs';
+
+.addressList {
+    display: grid;
+    grid-gap: var(--spacing-single);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    appearance: none;
+    color: var(--color-primary);
+    display: block;
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-single);
+    padding: 0;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-primary);
+        text-decoration: underline;
+    }
+
+    &:focus {
+        @extend %inputFocus;
+        color: var(--color-primary);
+    }
+}

@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.container {
+    background-color: var(--color-pale-gold);
+    grid-column-end: 2;
+    grid-column-start: 1;
+    height: 100%;
+    min-height: 25rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        grid-column-end: inherit;
+        grid-column-start: inherit;
+        min-height: inherit;
+    }
+
+    &.twoGrid {
+        grid-column-end: 3;
+    }
+}

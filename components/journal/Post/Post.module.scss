@@ -1,0 +1,15 @@
+.post {
+    font-size: var(--font-size-medium);
+    padding-bottom: var(--spacing-double);
+    width: 100%;
+
+    + article {
+        padding-top: var(--spacing-double);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
+}

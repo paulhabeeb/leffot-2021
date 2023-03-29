@@ -1,0 +1,54 @@
+@import 'buttons';
+
+// Explanation #1
+// We use noBottomBorder and noTopBorder when the ActionButton
+// is wrapped in a container that has a border. Because ActionButton
+// extends %buttonSubtle, which has a set height of 40px, we have to
+// set the height slightly smaller here, to compensate for the
+// border of the container.
+
+.button {
+    @extend %buttonSubtle;
+    border: 1px solid var(--color-light-grey);
+    border-radius: 2px;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-normal);
+    line-height: 1rem;
+    padding: var(--spacing-third);
+
+    &:hover {
+        background-color: var(--color-white);
+    }
+
+    &:disabled:hover {
+        background-color: var(--color-light-grey);
+    }
+}
+
+.noBottomBorder {
+    border-bottom: 0;
+    height: 38px; // See explanation #1
+}
+
+.noTopBorder {
+    border-top: 0;
+    height: 38px; // See explanation #1
+}
+
+.marginLeftHalf {
+    margin-left: var(--spacing-half);
+}
+
+.paddingLarge {
+    padding: var(--spacing-third) var(--spacing-half);
+}
+
+.icon {
+    svg {
+        display: inline-block;
+        fill: var(--color-not-black);
+        height: 16px;
+        vertical-align: middle;
+        width: 16px;
+    }
+}

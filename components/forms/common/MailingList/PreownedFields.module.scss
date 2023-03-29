@@ -1,0 +1,24 @@
+.sizeGrid {
+    display: grid;
+    gap: var(--spacing-third);
+    grid-template-columns: repeat(6, 1fr);
+    margin: 0px;
+}
+
+.label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-medium);
+    letter-spacing: 0;
+    margin-bottom: 0;
+}
+
+.caption {
+    color: var(--color-dark-grey);
+    margin-bottom: var(--spacing-half);
+}
+
+.errors {
+    margin-top: var(--spacing-third);
+}

@@ -1,0 +1,25 @@
+@import 'mixins';
+
+.payments {
+    @extend %tnum;
+    margin-top: var(--spacing-single);
+    max-width: 500px;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        margin-top: 0;
+    }
+
+    > div:last-of-type {
+        border-top: 1px solid var(--color-light-grey);
+        font-weight: var(--font-weight-sans-bold);
+        margin-top: var(--spacing-sixth);
+        padding-top: var(--spacing-half);
+    }
+}
+
+.paymentRow {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sixth) 0;
+}

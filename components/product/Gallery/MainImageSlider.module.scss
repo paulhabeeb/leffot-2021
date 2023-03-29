@@ -1,0 +1,6 @@
+@import 'slick';
+
+.container {
+    @extend %slickBase;
+    @extend %largeGreyGallery;
+}

@@ -1,0 +1,26 @@
+@keyframes stroke {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.8);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    animation: stroke 0.75s 0s infinite linear;
+    animation-fill-mode: both;
+    background: transparent !important;
+    border: 2px solid;
+    border-bottom-color: transparent !important;
+    border-radius: 100%;
+    display: inline-block;
+}

@@ -1,0 +1,112 @@
+@import 'mixins';
+
+.wrapper {
+    background-color: #efece7;
+    position: relative;
+
+    @include breakpoint('small') {
+        overflow: hidden;
+    }
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.imageWrapper {
+    align-items: center;
+    display: none;
+    margin-left: -15rem;
+    overflow: visible;
+    position: relative;
+
+    @include breakpoint('small') {
+        display: flex;
+        max-height: 600px;
+    }
+
+    @include breakpoint('medium') {
+        margin-right: var(--spacing-double);
+        max-height: 650px;
+    }
+
+    @include breakpoint('large') {
+        margin-right: var(--spacing-triple);
+        max-height: 450px;
+    }
+}
+
+.image {
+    height: 700px;
+    max-width: initial;
+    mix-blend-mode: darken;
+    width: auto;
+}
+
+.imageBackground {
+    background-position: center center;
+    background-size: 100%;
+    width: null;
+
+    @include breakpoint('small') {
+        background-image: none !important;
+        width: 60%;
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+
+    @include breakpoint('small') {
+        background-color: transparent;
+    }
+}
+
+.description {
+    color: var(--color-white);
+    padding: var(--spacing-double) var(--spacing-single);
+
+    @include breakpoint('small') {
+        color: var(--color-not-black);
+        padding: var(--spacing-double) 0;
+    }
+}
+
+.title {
+    color: var(--color-white);
+    font-size: var(--font-size-huge);
+    line-height: 1.2;
+    margin: var(--spacing-half) 0 var(--spacing-single);
+
+    @include breakpoint('small') {
+        color: var(--color-not-black);
+    }
+}
+
+.tag {
+    color: #ac7828;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-sans-bold);
+    text-shadow: 1px 1px 0 var(--color-not-black);
+
+    @include breakpoint('small') {
+        color: var(--color-primary);
+        text-shadow: none;
+    }
+}
+
+.caption {
+    font-size: var(--font-size-medium);
+    max-width: 800px;
+    width: 100%;
+
+    a {
+        color: var(--color-primary-dark);
+        font-weight: var(--font-weight-sans-bold);
+    }
+}

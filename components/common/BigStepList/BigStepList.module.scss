@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.container {
+    counter-reset: bigStep;
+    list-style: none !important;
+    margin-left: var(--spacing-single) !important;
+
+    @include breakpoint('medium') {
+        margin-left: var(--spacing-double) !important;
+    }
+}

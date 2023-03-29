@@ -1,0 +1,25 @@
+@import 'inputs';
+
+.button {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-sans-bold);
+    padding: 0;
+    text-decoration: underline;
+    transition: color 150ms ease;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        @extend %inputFocus;
+    }
+}
+
+.primary {
+    color: var(--color-primary-dark);
+}
+
+.secondary {
+    color: var(--color-secondary);
+}

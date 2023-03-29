@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.container {
+    margin-bottom: var(--spacing-single);
+    width: 100%;
+}
+
+.desktop {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: block;
+    }
+}
+
+.mobile {
+    display: block;
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.container {
+    padding: var(--spacing-half);
+    position: relative;
+}
+
+.overlay {
+    background-color: rgb(0, 0, 0, 0.045);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.infoButton {
+    bottom: var(--spacing-third);
+    cursor: pointer;
+    display: block;
+    fill: var(--color-dark-grey);
+    height: 18px;
+    position: absolute;
+    right: var(--spacing-third);
+    stroke: var(--color-dark-grey);
+    stroke-width: 2px;
+    transition: all 150ms ease;
+    width: 18px;
+}

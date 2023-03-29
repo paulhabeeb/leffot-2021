@@ -1,0 +1,49 @@
+@import 'mixins';
+
+.nav-open {
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+
+    body {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .body {
+        height: 100%;
+    }
+
+    .body,
+    .top-banner {
+        transition: 0.3s all ease;
+
+        @include breakpoint('small') {
+            transform: translate3d(50%, 0, 1px);
+        }
+
+        @include breakpoint('medium') {
+            transform: translate3d(33.333%, 0, 1px);
+        }
+    }
+
+    .mobile-overlay {
+        background: var(--color-not-black);
+        bottom: 0;
+        display: block;
+        left: 0;
+        opacity: 0.4;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+.has-activeNavPages {
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: auto;
+}

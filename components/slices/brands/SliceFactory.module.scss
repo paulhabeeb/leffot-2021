@@ -1,0 +1,10 @@
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include breakpoint('large') {
+        flex-direction: row;
+    }
+}

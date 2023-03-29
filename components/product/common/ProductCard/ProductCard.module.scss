@@ -1,0 +1,32 @@
+@import 'mixins';
+
+.productCardArticle {
+    margin-bottom: var(--spacing-half);
+    padding: 0;
+    position: relative;
+
+    @include breakpoint('medium') {
+        margin-bottom: var(--spacing-double);
+    }
+}
+
+.link {
+    text-decoration: none;
+}
+
+.customize {
+    background-color: var(--color-lightest-grey);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 50%;
+    display: flex;
+    padding: 5px;
+    position: absolute;
+    right: var(--spacing-half);
+    top: var(--spacing-half);
+    z-index: 5;
+}
+
+.customizeIcon {
+    height: 20px;
+    width: 20px;
+}

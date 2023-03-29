@@ -1,0 +1,23 @@
+@import 'mixins';
+
+.cards {
+    display: grid;
+    grid-gap: var(--spacing-double) var(--spacing-single);
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: calc(1600px - 6rem);
+    padding-top: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('small') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint('medium') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint('xl') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

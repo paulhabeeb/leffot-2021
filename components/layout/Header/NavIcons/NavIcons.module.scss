@@ -1,0 +1,79 @@
+@import 'mixins';
+
+.navIcons {
+    flex-basis: 0;
+    flex-grow: 1;
+    right: 0;
+    top: 26px;
+    z-index: 5;
+
+    @include breakpoint('large') {
+        flex-grow: 0;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        z-index: 50;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.navIconsList {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+
+    @include breakpoint('medium') {
+        position: relative;
+    }
+}
+
+%navIconBase {
+    line-height: 0;
+    padding-left: var(--spacing-third);
+}
+
+.navIcon {
+    @extend %navIconBase;
+}
+
+.navIconSearch {
+    @extend %navIconBase;
+    display: none;
+
+    @include breakpoint('large') {
+        display: block;
+    }
+}
+
+.navIconAccount {
+    @extend %navIconBase;
+    display: none;
+
+    @include breakpoint('medium') {
+        display: block;
+    }
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.searchIcon {
+    height: 16px;
+    margin-top: 2px;
+    width: 16px;
+}
+
+.searchButton {
+    padding: 0;
+
+    &:focus {
+        outline: var(--dotted-outline);
+    }
+}

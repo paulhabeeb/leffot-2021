@@ -1,0 +1,24 @@
+@import 'buttons';
+@import 'mixins';
+
+.button {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+}
+
+.dark {
+    background-color: var(--color-not-black);
+    border-color: var(--color-not-black);
+
+    &:focus,
+    &:hover {
+        background-color: var(--color-not-black-light);
+        border-color: var(--color-not-black-light);
+    }
+}
+
+.largePromo {
+    @include breakpoint('medium') {
+        margin-top: var(--spacing-single);
+    }
+}

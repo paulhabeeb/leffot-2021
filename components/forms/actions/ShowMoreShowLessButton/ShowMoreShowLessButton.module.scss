@@ -1,0 +1,23 @@
+@import 'buttons';
+@import 'inputs';
+
+.button {
+    @extend %buttonSubtle;
+    @extend %buttonSizeSmall;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon {
+    display: inline-block;
+    fill: var(--color-not-black);
+    height: 18px;
+    margin-left: var(--spacing-quarter);
+    transition: all 150ms ease;
+    vertical-align: middle;
+    width: 18px;
+
+    &.isOpen {
+        transform: rotate(-180deg);
+    }
+}

@@ -1,0 +1,12 @@
+@import 'mixins';
+
+.placeholder {
+    max-height: 50vh;
+    object-fit: contain;
+    width: auto;
+
+    @include breakpoint('medium') {
+        max-height: none;
+        width: 100%;
+    }
+}

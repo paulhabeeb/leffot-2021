@@ -1,0 +1,20 @@
+@import 'buttons';
+
+.container {
+    display: block;
+    margin: var(--spacing-two-thirds) auto 0;
+    max-width: 75rem;
+    width: 100%;
+}
+
+.checkoutButton {
+    @extend %buttonPrimary;
+    width: 100%;
+}
+
+.viewCartButton {
+    @extend %buttonSubtle;
+    @extend %buttonSizeSmall;
+    margin-top: var(--spacing-third);
+    width: 100%;
+}

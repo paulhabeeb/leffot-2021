@@ -1,0 +1,5 @@
+@import 'inputs';
+
+.select {
+    @extend %selectInput;
+}

@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    position: initial;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+        max-width: 1600px;
+        padding: 2rem var(--spacing-single) var(--spacing-triple);
+    }
+}

@@ -1,0 +1,42 @@
+@import 'mixins';
+
+.paginator {
+    padding: var(--spacing-single) 0;
+    text-align: center;
+
+    @include breakpoint('medium') {
+        padding: 0;
+    }
+}
+
+.pageWrapper {
+    padding: 0 var(--spacing-sixth);
+    display: inline-block;
+}
+
+.page {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-medium-small);
+    padding: 0 var(--spacing-sixth) var(--spacing-eighth);
+}
+
+.pageLink {
+    color: var(--color-dark-grey);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.currentPage {
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-not-black);
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.viewAll {
+    color: var(--color-not-black);
+    display: block;
+    margin-top: var(--spacing-single);
+}

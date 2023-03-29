@@ -1,0 +1,13 @@
+.label {
+    box-sizing: border-box;
+    display: block;
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-sans-medium);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-quarter);
+    padding: 0;
+
+    &.large {
+        font-size: var(--font-size-medium);
+    }
+}

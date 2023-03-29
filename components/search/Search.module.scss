@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-single) var(--spacing-single) 0;
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: 0 var(--spacing-double);
+    }
+}
+
+.wrapper {
+    padding: var(--spacing-single) 0 2rem;
+
+    @include breakpoint('medium') {
+        border-bottom: 1px solid var(--color-light-grey);
+    }
+}
+
+.title {
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'lnum';
+    font-size: var(--font-size-larger);
+    margin-bottom: var(--spacing-single);
+}

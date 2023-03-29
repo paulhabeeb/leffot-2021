@@ -1,0 +1,13 @@
+@import 'mixins';
+
+.item {
+    display: table-cell;
+    flex-basis: calc(100% - 125px);
+    flex-grow: 1;
+    padding-right: var(--spacing-single);
+    vertical-align: top;
+
+    @include breakpoint('medium') {
+        padding-right: var(--spacing-double);
+    }
+}

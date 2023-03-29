@@ -1,0 +1,28 @@
+@import 'inputs';
+@import 'mixins';
+
+.button {
+    color: #757575;
+    font-size: 26px;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0;
+    position: absolute;
+    right: var(--spacing-half);
+    top: 1.05rem;
+    transition: all 200ms ease;
+    width: 2rem;
+    z-index: 50;
+
+    @include breakpoint('medium') {
+        font-size: var(--font-size-largest);
+    }
+
+    &:hover {
+        color: #999;
+    }
+
+    &:focus {
+        @extend %inputFocus;
+    }
+}

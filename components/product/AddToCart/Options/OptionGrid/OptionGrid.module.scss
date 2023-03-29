@@ -1,0 +1,25 @@
+.options {
+    display: grid;
+    grid-gap: var(--spacing-third);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    &.oneCol {
+        grid-template-columns: 1fr;
+    }
+
+    &.twoCols {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &.threeCols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.fourCols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.sixCols {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

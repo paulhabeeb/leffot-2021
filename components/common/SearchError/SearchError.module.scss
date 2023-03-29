@@ -1,0 +1,24 @@
+@import 'mixins';
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: var(--spacing-single) var(--spacing-single) var(--spacing-double);
+    width: 100%;
+
+    @include breakpoint('large') {
+        padding: var(--spacing-double) var(--spacing-double)
+            var(--spacing-triple);
+    }
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-serif-bold);
+}
+
+.caption {
+    font-size: var(--font-size-medium);
+    max-width: 550px;
+}

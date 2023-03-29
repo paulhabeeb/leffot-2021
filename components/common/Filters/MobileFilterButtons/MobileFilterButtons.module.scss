@@ -1,0 +1,30 @@
+// There are no media queries to hide the buttons on Desktop because
+// React shows/hides them based on the viewport.
+
+@import 'buttons';
+
+.container {
+    display: flex;
+}
+
+.buttonContainer {
+    display: block;
+    width: 100%;
+
+    button {
+        @extend %buttonSecondary;
+        align-items: center;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        svg {
+            display: inline-block;
+            fill: var(--color-white);
+            filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.5));
+            height: 30px;
+            width: 30px;
+        }
+    }
+}

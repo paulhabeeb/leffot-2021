@@ -1,0 +1,54 @@
+.tab {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+
+    a {
+        background: linear-gradient(
+            rgb(255, 255, 255) 75%,
+            var(--color-lightest-grey)
+        );
+        border: 1px solid var(--color-light-grey);
+        border-radius: 1px;
+        border-top-width: 2px;
+        color: var(--color-dark-grey);
+        display: inline-block;
+        font-size: var(--font-size-medium-small);
+        margin-bottom: -1px;
+        margin-right: var(--spacing-half);
+        padding: var(--spacing-third) var(--spacing-half);
+        text-align: center;
+        text-decoration: none;
+        transition: all 200ms ease;
+
+        &:hover {
+            color: var(--color-not-black);
+            border-color: var(--color-medium-grey);
+            border-bottom-color: var(--color-light-grey);
+        }
+
+        &.isActive {
+            background: var(--color-white);
+            border-color: var(--color-light-grey);
+            border-bottom-color: var(--color-white);
+            border-top-color: var(--color-primary);
+            box-shadow: 0 -5px 5px -3px rgba(31, 31, 31, 0.15);
+            color: var(--color-not-black);
+            font-weight: var(--font-weight-sans-bold);
+
+            &:hover {
+                color: var(--color-not-black);
+            }
+        }
+
+        &::after {
+            color: transparent;
+            content: attr(title);
+            display: block;
+            font-weight: var(--font-weight-sans-bold);
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+}

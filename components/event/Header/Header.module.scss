@@ -1,0 +1,14 @@
+.container {
+    margin-bottom: var(--spacing-single);
+}
+
+.title {
+    font-size: var(--font-size-xl);
+    margin: var(--spacing-single) 0 var(--spacing-third);
+}
+
+.date {
+    color: var(--color-dark-grey);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium);
+}

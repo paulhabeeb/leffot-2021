@@ -1,0 +1,26 @@
+.button {
+    color: var(--color-primary);
+    display: inline-block;
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--color-primary);
+        text-decoration: underline;
+    }
+
+    &::before {
+        border-left: 1.5px solid var(--color-primary);
+        border-top: 1.5px solid var(--color-primary);
+        content: '';
+        display: inline-block;
+        height: 8px;
+        margin-right: var(--spacing-sixth);
+        margin-top: -2px;
+        transform: rotate(-45deg);
+        vertical-align: middle;
+        width: 8px;
+    }
+}

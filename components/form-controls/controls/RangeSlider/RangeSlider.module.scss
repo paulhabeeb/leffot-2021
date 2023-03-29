@@ -1,0 +1,45 @@
+@import 'inputs';
+
+.input {
+    appearance: none;
+    background: transparent;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+
+        &::-moz-range-thumb,
+        &::-webkit-slider-thumb {
+            @extend %inputFocus;
+            border-color: var(--color-light-grey);
+        }
+    }
+
+    &::-moz-range-thumb,
+    &::-webkit-slider-thumb {
+        appearance: none;
+        background: var(--color-dark-grey);
+        border: 1px solid transparent;
+        border-radius: 50%;
+        box-shadow: var(--box-shadow-input);
+        cursor: pointer;
+        height: calc(var(--spacing-two-thirds) - 2px);
+        margin-top: -14px;
+        width: calc(var(--spacing-two-thirds) - 2px);
+    }
+
+    &::-moz-range-track,
+    &::-webkit-slider-runnable-track {
+        background: var(--color-light-grey);
+        border: 1px solid var(--color-light-grey);
+        border-radius: 3px;
+        box-shadow: var(--box-shadow-input);
+        cursor: pointer;
+        height: 0.3rem;
+        width: 100%;
+    }
+}
+
+.disabled {
+    @extend %disabled;
+}

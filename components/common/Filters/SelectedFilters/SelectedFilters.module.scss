@@ -1,0 +1,57 @@
+@import 'mixins';
+
+.container {
+    padding-bottom: var(--spacing-half);
+}
+
+.bottomBorder {
+    border-bottom: 1px solid var(--color-light-grey);
+    padding: var(--spacing-half) var(--spacing-single);
+
+    @include breakpoint('medium') {
+        border: 0;
+        padding: 0 0 var(--spacing-half) 0;
+    }
+}
+
+.head {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+
+    .clearFilters {
+        @include breakpoint('medium') {
+            display: none;
+        }
+    }
+}
+
+.selectedFilters {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+    margin: 0 0 var(--spacing-third);
+
+    @include breakpoint('medium') {
+        display: none;
+    }
+}
+
+.desktopClearFilters {
+    display: none;
+
+    @include breakpoint('medium') {
+        display: block;
+    }
+}
+
+.clearFilters {
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-sans-bold);
+    padding: 0;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

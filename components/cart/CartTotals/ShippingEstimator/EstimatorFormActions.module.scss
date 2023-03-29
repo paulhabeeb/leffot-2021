@@ -1,0 +1,6 @@
+@import 'buttons';
+
+.button {
+    @extend %buttonSecondary;
+    width: 100%;
+}

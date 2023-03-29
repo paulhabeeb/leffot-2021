@@ -1,0 +1,14 @@
+.description {
+    font-size: var(--font-size-medium-small);
+    padding-top: var(--spacing-single);
+
+    a,
+    a:focus,
+    a:hover {
+        color: var(--color-primary);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}

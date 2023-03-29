@@ -1,0 +1,25 @@
+@import 'mixins';
+
+.cartSidebarWrapper {
+    width: 100%;
+
+    @include breakpoint('medium') {
+        width: 33.33333%;
+    }
+
+    @include breakpoint('large') {
+        width: 25%;
+    }
+}
+
+.cartSidebar {
+    background: var(--color-lightest-grey);
+    box-shadow: 0 0 10px 0 rgba(31, 31, 31, 0.2);
+    padding: var(--spacing-single);
+
+    @include breakpoint('small') {
+        margin: 0 0 var(--spacing-single);
+        position: sticky;
+        top: calc(71px + var(--spacing-double));
+    }
+}

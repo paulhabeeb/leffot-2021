@@ -1,0 +1,72 @@
+@import 'mixins';
+
+.item {
+    border-bottom: 1px solid var(--color-light-grey);
+    display: flex;
+    line-height: 1.15;
+    margin-bottom: var(--spacing-two-thirds);
+    padding-bottom: var(--spacing-two-thirds);
+
+    &:last-of-type {
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.image {
+    align-items: center;
+    display: flex;
+    padding-right: var(--spacing-third);
+    width: 75px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+}
+
+.brand {
+    color: var(--color-dark-grey);
+    display: inline-block;
+    font-weight: var(--font-weight-sans-bold);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-eighth);
+}
+
+.name {
+    font-feature-settings: 'lnum';
+    font-variant-numeric: lining-nums;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+    margin: 0 0 var(--spacing-eighth) 0;
+    text-transform: none;
+
+    > a {
+        color: var(--color-not-black);
+        text-decoration: none;
+    }
+}
+
+.priceWrapper {
+    @extend %tnum;
+    display: inline-block;
+    font-size: var(--font-size-base);
+}
+
+.salePrice {
+    margin-right: var(--spacing-third);
+    position: relative;
+
+    &::after {
+        border-top: 2px solid var(--color-not-black);
+        content: '';
+        display: block;
+        left: -5%;
+        opacity: 0.4;
+        position: absolute;
+        top: 45%;
+        transform: rotate(-5deg);
+        width: 103%;
+    }
+}

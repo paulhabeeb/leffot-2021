@@ -1,0 +1,47 @@
+@import 'mixins';
+
+body:global(.has-activeModal) {
+    overflow: hidden;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background-color: var(--color-white);
+    display: none;
+    left: 50%;
+    max-height: 90%;
+    max-width: 95%;
+    min-height: 240px;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    width: 900px;
+    z-index: 1005;
+}
+
+.modal--small {
+    width: 500px;
+}
+
+.modal--pow {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-content--pow {
+    padding: 2rem;
+}

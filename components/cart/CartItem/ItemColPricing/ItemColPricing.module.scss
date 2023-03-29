@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.itemColPricing {
+    display: none;
+
+    @include breakpoint('medium') {
+        clear: both;
+        display: table-cell;
+        padding-top: var(--spacing-double);
+        text-align: right;
+        vertical-align: top;
+        width: 16.66667%;
+    }
+}

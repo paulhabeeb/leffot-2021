@@ -1,0 +1,24 @@
+@import 'tables';
+
+.question {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-third);
+}
+
+.answer {
+    font-size: var(--font-size-medium-small);
+    margin-bottom: 0;
+
+    + dt {
+        margin-top: 2rem;
+    }
+
+    a {
+        color: var(--color-primary-dark);
+    }
+}
+
+.tableWrapper {
+    @extend %table;
+}

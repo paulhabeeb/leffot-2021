@@ -1,0 +1,25 @@
+@import 'mixins';
+
+.container {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    margin-top: var(--spacing-quarter);
+    max-width: 250px;
+    width: 100%;
+}
+
+.title {
+    font-weight: var(--font-weight-sans-medium);
+    margin-bottom: var(--spacing-eighth);
+    margin-right: var(--spacing-half);
+}
+
+.caption {
+    margin-bottom: var(--spacing-eighth);
+}
+
+.extraOptions {
+    @include breakpoint('small') {
+        display: none;
+    }
+}

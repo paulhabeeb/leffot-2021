@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.list {
+    display: grid;
+    grid-gap: var(--spacing-half);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.sevenColumns {
+        @include breakpoint('medium') {
+            grid-template-columns: repeat(7, 1fr);
+        }
+    }
+
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.fieldset {
+    margin-bottom: var(--spacing-double);
+    max-width: 650px;
+}

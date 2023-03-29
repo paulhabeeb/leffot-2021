@@ -1,0 +1,38 @@
+@import 'inputs';
+
+.container {
+    border-bottom: 1px solid var(--color-light-grey);
+    border-top: 1px solid var(--color-light-grey);
+    margin-bottom: var(--spacing-single);
+}
+
+.h3 {
+    font-family: var(--font-sans);
+    margin-bottom: 0;
+    padding: var(--spacing-half) 0;
+}
+
+.button {
+    display: flex;
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+
+    &:focus {
+        @extend %inputFocus;
+    }
+}
+
+.section {
+    overflow-y: scroll;
+    background-image: linear-gradient(to right, white, white),
+        linear-gradient(to left, rgba(31, 31, 31, 0.2), rgba(255, 255, 255, 0));
+    background-position: right center, right center;
+    background-repeat: no-repeat;
+    background-color: var(--color-white);
+    background-size: 20px 100%, 12px 100%;
+    background-attachment: local, scroll;
+    background-clip: content-box;
+}

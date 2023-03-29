@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.container {
+    margin-top: var(--spacing-third);
+    padding-bottom: var(--spacing-single);
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint('medium') {
+        margin-top: var(--spacing-triple);
+    }
+}

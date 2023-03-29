@@ -1,0 +1,19 @@
+.subtitle {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-sixth);
+}
+
+.caption {
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-single);
+
+    p {
+        margin-bottom: 0;
+
+        & + p {
+            margin-top: var(--spacing-half);
+        }
+    }
+}

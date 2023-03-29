@@ -1,0 +1,42 @@
+@import 'mixins';
+
+.wrapper + .wrapper {
+    margin-top: var(--spacing-single);
+
+    @include breakpoint('large') {
+        margin-top: 0;
+    }
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint('large') {
+        &.twoCols {
+            columns: 2;
+        }
+
+        &.threeCols {
+            columns: 3;
+        }
+
+        &.fourCols {
+            columns: 4;
+        }
+    }
+}
+
+.listTitle {
+    display: block;
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-sans-bold);
+    font-size: var(--font-size-medium);
+    padding: var(--spacing-eighth) 0;
+
+    @include breakpoint('large') {
+        margin-bottom: var(--spacing-sixth);
+        padding: var(--spacing-sixth) var(--spacing-single);
+    }
+}

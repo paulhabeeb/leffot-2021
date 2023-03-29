@@ -1,0 +1,41 @@
+@import 'mixins';
+
+.subtitle {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &.product {
+        font-size: var(--font-size-medium);
+        margin-bottom: var(--spacing-two-thirds);
+    }
+
+    @include breakpoint('small') {
+        font-size: var(--font-size-base);
+
+        &.product {
+            font-size: var(--font-size-medium);
+        }
+    }
+}
+
+.brand {
+    color: var(--color-dark-grey);
+}
+
+.preorder {
+    color: var(--color-primary);
+    letter-spacing: 0;
+    margin-right: var(--spacing-third);
+
+    &::after {
+        color: var(--color-light-grey);
+        content: '/';
+        display: inline-block;
+        padding-left: var(--spacing-third);
+    }
+}

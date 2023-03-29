@@ -1,0 +1,63 @@
+@import 'buttons';
+@import 'mixins';
+
+.caption {
+    font-size: var(--font-size-medium-small);
+    margin-bottom: var(--spacing-half);
+}
+
+.comments {
+    margin: 2rem 0;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        width: 50%;
+    }
+}
+
+%minButtonHeight {
+    min-height: 40px;
+}
+
+.button {
+    @extend %buttonPrimary;
+    @extend %minButtonHeight;
+
+    &::after {
+        color: transparent;
+        content: attr(title);
+        display: block;
+        font-weight: var(--font-weight-sans-bold);
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+.cancelButton {
+    @extend %buttonSubtle;
+    @extend %minButtonHeight;
+    margin-left: var(--spacing-half);
+}
+
+.shippingLabel {
+    margin-bottom: var(--spacing-single);
+}
+
+.shippingLabelTitle {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-large);
+    margin-bottom: var(--spacing-third);
+}
+
+.shippingLabelCaption {
+    color: var(--color-dark-grey);
+}
+
+.shippingLabelOption {
+    margin-bottom: var(--spacing-half);
+}
+
+.topError {
+    margin-top: var(--spacing-two-thirds);
+}

@@ -1,0 +1,48 @@
+@import 'mixins';
+
+.menuItemLink {
+    color: var(--color-not-black);
+    display: inline;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+        color: var(--color-not-black);
+    }
+
+    &.isActive :global(.linkName) {
+        text-decoration: underline;
+        text-decoration-color: var(--color-primary);
+        text-decoration-thickness: 3px;
+
+        @include breakpoint('small') {
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    :global(.linkName) {
+        white-space: nowrap;
+    }
+
+    @include breakpoint('large') {
+        &.hasUnderline {
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: var(--color-primary);
+                text-decoration-thickness: 2px;
+            }
+        }
+    }
+}
+
+.menuItemSaleLink {
+    color: var(--color-red) !important;
+
+    &:hover {
+        color: var(--color-red);
+    }
+
+    &.isActive :global(.linkName) {
+        text-decoration-color: var(--color-red);
+    }
+}

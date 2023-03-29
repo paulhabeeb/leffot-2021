@@ -1,0 +1,20 @@
+.itemOptions {
+    font-feature-settings: 'lnum';
+    font-variant-numeric: lining-nums;
+    margin: var(--spacing-third) 0 var(--spacing-half);
+}
+
+.option {
+    display: flex;
+}
+
+.optionName {
+    color: var(--color-dark-grey);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: 0;
+    margin-right: var(--spacing-half);
+}
+
+.optionValue {
+    margin-bottom: 0;
+}

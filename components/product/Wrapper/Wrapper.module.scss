@@ -1,0 +1,31 @@
+@import 'mixins';
+
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+}
+
+.productDetails {
+    margin-top: var(--spacing-single);
+    margin-bottom: var(--spacing-double);
+    padding-left: var(--spacing-single);
+    padding-right: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+
+    @include breakpoint('large') {
+        flex-basis: initial;
+        flex-grow: initial;
+        padding-left: var(--spacing-double);
+        padding-right: var(--spacing-double);
+        width: 500px;
+    }
+}

@@ -1,0 +1,8 @@
+@import 'slick';
+
+.gallery {
+    @extend %slickBase;
+    @extend %inlineGallery;
+    max-width: calc(100% - 2rem);
+    width: 100%;
+}

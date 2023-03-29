@@ -1,0 +1,25 @@
+@import 'buttons';
+
+.container {
+    max-width: 550px;
+    width: 100%;
+}
+
+.passwordForm {
+    margin-top: var(--spacing-double);
+}
+
+.formHeader {
+    color: var(--color-dark-grey);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+}
+
+.actions {
+    margin-top: var(--spacing-half);
+}
+
+.submit {
+    @extend %buttonSecondary;
+    min-width: 150px;
+}

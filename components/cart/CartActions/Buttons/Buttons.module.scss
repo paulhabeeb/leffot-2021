@@ -1,0 +1,41 @@
+@import 'buttons';
+
+%checkoutButtonBase {
+    border-radius: 4px;
+    height: 52px;
+    width: 100%;
+}
+
+.applePayButton {
+    display: none;
+}
+
+.checkoutButton {
+    @extend %buttonPrimary;
+    @extend %buttonSizeLarge;
+    @extend %checkoutButtonBase;
+    margin-bottom: var(--spacing-quarter);
+}
+
+.paypalContainer {
+    @extend %buttonBase;
+    @extend %buttonSizeLarge;
+    @extend %checkoutButtonBase;
+    background-color: #0070ba;
+    color: var(--color-white);
+    padding: 0;
+}
+
+@supports (-webkit-appearance: -apple-pay-button) {
+    .applePayButton {
+        @extend %checkoutButtonBase;
+        -webkit-appearance: -apple-pay-button;
+        -apple-pay-button-style: black;
+        cursor: pointer;
+        display: inline-block;
+    }
+}
+
+.error {
+    margin-top: var(--spacing-half);
+}

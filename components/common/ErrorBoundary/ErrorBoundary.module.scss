@@ -1,0 +1,18 @@
+.errorContainer {
+    background: var(--color-lightest-grey);
+    border-top: 3px solid var(--color-red);
+    display: inline-block;
+    font-size: var(--font-size-medium-small);
+    margin: var(--spacing-single);
+    padding: var(--spacing-single);
+}
+
+.errorTitle {
+    font-family: var(-font-sans);
+    font-size: var(--font-size-medium-large);
+    font-weight: var(--font-weight-sans-bold);
+}
+
+.errorCaption {
+    margin: 0;
+}

@@ -1,0 +1,23 @@
+@import 'mixins';
+
+%dropdownListItemBase {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-sans-normal);
+    font-size: var(--font-size-medium);
+    padding: var(--spacing-eighth) 0;
+
+    @include breakpoint('large') {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sixth) var(--spacing-single);
+    }
+}
+
+.dropdownListItem {
+    @extend %dropdownListItemBase;
+    width: 175px;
+}
+
+.dropdownListItemHeader {
+    @extend %dropdownListItemBase;
+    font-weight: var(--font-weight-sans-bold);
+}

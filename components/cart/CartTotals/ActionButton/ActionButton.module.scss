@@ -1,0 +1,28 @@
+.container {
+    color: var(--color-dark-grey);
+    font-variant-numeric: initial;
+    font-feature-settings: 'tnum';
+    font-size: var(--font-size-small);
+}
+
+.caption {
+    margin-right: var(--spacing-third);
+}
+
+.button {
+    padding: 0;
+    text-align: left;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon {
+    display: inline-block;
+    fill: var(--color-dark-grey);
+    height: 10px;
+    margin-left: var(--spacing-quarter);
+    width: 10px;
+}

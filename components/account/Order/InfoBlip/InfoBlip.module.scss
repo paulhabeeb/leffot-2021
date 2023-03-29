@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.container {
+    margin-bottom: var(--spacing-single);
+
+    @include breakpoint('medium') {
+        margin-bottom: 0;
+    }
+}
+
+.title {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-sixth);
+}

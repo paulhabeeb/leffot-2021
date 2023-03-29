@@ -1,0 +1,15 @@
+@import 'mixins';
+
+.cartMain {
+    width: 100%;
+
+    @include breakpoint('medium') {
+        padding-right: var(--spacing-double);
+        padding-top: var(--spacing-single);
+        width: 66.66667%;
+    }
+
+    @include breakpoint('large') {
+        width: 75%;
+    }
+}

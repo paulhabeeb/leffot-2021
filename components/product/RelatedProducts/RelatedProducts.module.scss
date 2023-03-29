@@ -1,0 +1,62 @@
+@import 'mixins';
+
+.container {
+    border-top: 2px solid var(--color-light-grey);
+    display: flex;
+    flex-direction: column;
+    margin: 0 var(--spacing-single);
+    padding: var(--spacing-double) 0;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+
+    @include breakpoint('large') {
+        margin: 0 var(--spacing-double);
+    }
+}
+
+.header {
+    margin-bottom: var(--spacing-single);
+    max-width: 250px;
+    padding-right: var(--spacing-single);
+    width: 100%;
+
+    @include breakpoint('medium') {
+        margin-bottom: 0;
+    }
+}
+
+.title {
+    font-size: var(--font-size-huge);
+    line-height: 1.1;
+}
+
+.caption {
+    color: var(--color-dark-grey);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-normal);
+    letter-spacing: 0;
+}
+
+.products {
+    display: grid;
+    grid-gap: var(--spacing-single);
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+
+    article {
+        margin-bottom: 0;
+
+        h4 {
+            overflow-wrap: break-word;
+        }
+    }
+
+    @include breakpoint('xl') {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

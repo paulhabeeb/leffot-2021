@@ -1,0 +1,30 @@
+@import 'mixins';
+
+.productGrid {
+    display: grid;
+    grid-gap: var(--spacing-half);
+    width: 100%;
+
+    &.oneUp {
+        grid-template-columns: 1fr;
+    }
+
+    &.twoUp {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint('medium') {
+        grid-gap: var(--spacing-single);
+
+        &.oneUp {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @include breakpoint('large') {
+        &.oneUp,
+        &.twoUp {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

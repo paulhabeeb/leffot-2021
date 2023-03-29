@@ -1,0 +1,35 @@
+.previewCartItems {
+    width: 100%;
+}
+
+.extraItems {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        background-color: var(--color-light-grey);
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+
+    + div {
+        margin-top: var(--spacing-single);
+    }
+}
+
+.extraItemsMessage {
+    background-color: var(--color-white);
+    color: var(--color-dark-grey);
+    font-size: var(--font-size-small);
+    padding: var(--spacing-third);
+    position: relative;
+}
+
+.emptyCart {
+    padding: var(--spacing-two-thirds);
+    text-align: center;
+}

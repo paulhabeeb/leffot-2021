@@ -1,0 +1,13 @@
+.headerItem {
+    display: table-cell;
+    padding-bottom: var(--spacing-third);
+    padding-right: var(--spacing-half);
+
+    &.center {
+        text-align: center;
+    }
+
+    &.right {
+        text-align: right;
+    }
+}

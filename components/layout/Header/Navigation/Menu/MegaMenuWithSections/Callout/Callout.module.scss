@@ -1,0 +1,35 @@
+@import 'buttons';
+@import 'mixins';
+
+.wrapper {
+    background-color: var(--color-lightest-grey);
+    display: none;
+    font-weight: var(--font-weight-sans-normal);
+    max-width: 400px;
+    padding: var(--spacing-single);
+
+    @include breakpoint('large') {
+        display: block;
+    }
+}
+
+.callloutTitle {
+    color: var(--color-primary-dark);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-medium-large);
+    font-wieght: var(--font-weight-sans-bold);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-half);
+    text-decoration: none;
+}
+
+.calloutDescription {
+    margin-bottom: 0;
+}
+
+.calloutButton {
+    @extend %buttonBase;
+    @extend %buttonPrimary;
+
+    margin-top: var(--spacing-two-thirds);
+}
